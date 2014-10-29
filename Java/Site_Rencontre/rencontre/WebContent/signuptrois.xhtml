@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:icecore="http://www.icefaces.org/icefaces/core"
+        xmlns:ace="http://www.icefaces.org/icefaces/components"
+        xmlns:ice="http://www.icesoft.com/icefaces/component"
+    >
+    <h:head>
+         <meta charset="utf-8"/>
+    	<title>Inscription (3/4)</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/> 
+    
+	<ice:outputStyle  href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<ice:outputStyle  href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+
+	<ice:outputStyle  href="css/font-awesome.css" rel="stylesheet"/>
+    <ice:outputStyle  href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet"/>
+    
+	<ice:outputStyle  href="css/style.css" rel="stylesheet" type="text/css"/>
+	<ice:outputStyle  href="css/pages/signin.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+             	
+	<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			
+			<h:outputLink  class="brand" href="index.html">
+				ISI Love			
+			</h:outputLink>		
+			
+			<div class="nav-collapse">
+				<ul class="nav pull-right">
+					<li class="">						
+						<h:outputLink action="#{inscriptionBackingBean.login}" value="Vous avez déjà un compte? Connectez-vous maintenant">
+						</h:outputLink>
+						
+					</li>
+					
+				</ul>
+				
+			</div><!--/.nav-collapse -->	
+	
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+	
+</div> <!-- /navbar -->
+<div class="account-container register">
+	
+	<div class="content clearfix">
+		
+		<h:form action="#" method="post">
+		
+			<h1>Inscription(3/4)</h1>			
+			
+			<div class="login-fields">
+				<div >
+				<h:outputText value="Fumeur"></h:outputText>
+				<ice:selectBooleanCheckbox value="Fumeur"  ></ice:selectBooleanCheckbox>
+				</div> 
+		
+				<div >
+				<h:outputText value="Recevoir courriel pour messages reçus"></h:outputText>
+				<ice:selectBooleanCheckbox value="#{inscriptionBackingBean.courrielMessage}"/>
+				</div> 
+				
+				<div >
+				<h:outputText value="Recevoir de courriel lorsqu'ajouté comme favoris"></h:outputText>
+				<ice:selectBooleanCheckbox value="#{inscriptionBackingBean.courrielAjoute}" />
+				</div> 
+				
+				<div >
+				<h:outputText value="Recevoir de courriel lorsque suprimé des favoris"></h:outputText>
+				<ice:selectBooleanCheckbox value="#{inscriptionBackingBean.courrielSupprime}" />
+				</div> 
+			
+			<ice:commandLink value="Suivant" styleClass="button btn btn-primary btn-large" action="oui"></ice:commandLink>
+				
+			</div> <!-- /login-fields -->
+
+			
+		</h:form>
+		
+	</div> <!-- /content -->
+	
+</div> <!-- /account-container -->
+
+
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="js/signin.js"></script>
+
+      
+    </h:body>
+</html>

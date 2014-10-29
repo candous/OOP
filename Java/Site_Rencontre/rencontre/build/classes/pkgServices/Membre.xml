@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.Membre">
+	<resultMap type="Membre" id="MembreMap" >
+		<id column="membreId" property="membreId"/>
+		<result column="nom" property="nom"/>
+		<result column="prenom" property="prenom"/>
+		<result column="description" property="description"/>
+		<result column="pseudo" property="pseudo"/>
+		<result column="password" property="password"/>
+		<result column="age" property="age"/>
+		<result column="email" property="email"/>
+		<result column="sexe" property="sexe"/>
+		<result column="isOnline" property="isOnline"/>
+		<result column="smoke" property="smoke"/>
+		<result column="height" property="height"/>
+		<result column="lastVisit" property="lastVisit"/>
+		<result column="informed_message_received" property="informed_message_received"/>
+		<result column="informed_added_by_others" property="informed_added_by_others"/>
+		<result column="informed_removed_by_others" property="informed_removed_by_others"/>
+		
+		<association property="categorie" javaType="Categorie">
+			<id column="categorieID" property="categorieID"/>
+			<result column="categorie_description" property="description"/>
+		</association>
+		
+		<association property="niveauMembre" javaType="NiveauMembre">
+			<id column="niveauMembreId" property="id"/>
+			<result column="niveau_description" property="description"/>
+			<result column="nbPhotosMax" property="nbPhotosMax"/>
+			<result column="nbFavorisMax" property="nbFavorisMax"/>
+			<result column="droitEnvoyerMag" property="droitEnvoyerMag"/>
+		</association>	
+		
+		<association property="hairColor" javaType="HairColor">
+			<id column="hair_color_id" property="id"/>
+			<result column="hair_color_description" property="description"/>
+		</association>
+		
+		<association property="skinColor" javaType="SkinColor">
+			<id column="skin_color_id" property="id"/>
+			<result column="skin_color_description" property="description"/>
+		</association>
+			
+		<association property="eyeColor" javaType="EyeColor">
+			<id column="eye_color_id" property="id"/>
+			<result column="eye_color_description" property="description"/>
+		</association>	
+		
+		<association property="weightRange" javaType="WeightRange">
+			<id column="weight_range_id" property="id"/>
+			<result column="weight_range_description" property="description"/>
+		</association>
+		
+		<association property="city" javaType="City">
+			<id column="city_id" property="id"/>
+			<result column="city_description" property="description"/>
+		</association>
+		
+		<association property="status" javaType="Status">
+			<id column="status_id" property="id"/>
+			<result column="status_description" property="description"/>
+		</association>
+		
+		<collection property="listePhotos" ofType="Photo">
+			<id column="photoid" property="id"/>
+			<result column="m_membreId" property="memberID"/>
+			<result column="chemin" property="chemin"/>
+			<result column="isprofil" property="isProfil"/>
+		</collection>
+		
+		<collection property="listeHobbies" ofType="Hobby">
+			<id column="hobby_id" property="id"/>
+			<result column="hobby_description" property="description"/>
+		</collection>
+		
+		
+		
+	</resultMap>
+	
+
+
+
+
+
+	<select id="getTousLesMembres" resultMap="MembreMap">
+		select *,m.membreId as "m_membreId", c.description as "categorie_description" , n.description as "niveau_description",
+		       h.description as "hair_color_description",
+		       s.description as "skin_color_description",
+		       e.description as "eye_color_description",
+		       w. description as "weight_range_description",
+		       city.nom as "city_description",
+		       status.description as "status_description",
+		       hobby.description as "hobby_description"
+		       
+		from membre m
+		left join categorie c on(m.categorieId = c. categorieId)
+		left join niveaumembres n on (m.niveauMembreId = n.niveauMembreId)
+		left join hair_color h on (m.hair_color_id = h.id)
+		left join skin_color s on (m.skin_color_id = s.id)
+		left join eye_color e on (m.eye_color_id = e.id)
+		left join weight_range w on (m.weight_range_id = w.id)
+		left join city on (m.city_id = city.id)
+		left join status on(m.status_id = status.id)
+		left join photos p on(m.membreId = p.membreId)
+		left join user_hobby_link on (m.membreId = user_hobby_link.user_id)
+		left join hobby on (user_hobby_link.hobby_id = hobby.id)
+	</select>
+	
+	
+	<select id="getMembreById" resultMap="MembreMap" parameterType="Integer">
+		select *,m.membreId as "m_membreId", c.description as "categorie_description" , n.description as "niveau_description",
+		       h.description as "hair_color_description",
+		       s.description as "skin_color_description",
+		       e.description as "eye_color_description",
+		       w. description as "weight_range_description",
+		       city.nom as "city_description",
+		       status.description as "status_description",
+		       hobby.description as "hobby_description"
+		       
+		from membre m
+		left join categorie c on(m.categorieId = c. categorieId)
+		left join niveaumembres n on (m.niveauMembreId = n.niveauMembreId)
+		left join hair_color h on (m.hair_color_id = h.id)
+		left join skin_color s on (m.skin_color_id = s.id)
+		left join eye_color e on (m.eye_color_id = e.id)
+		left join weight_range w on (m.weight_range_id = w.id)
+		left join city on (m.city_id = city.id)
+		left join status on(m.status_id = status.id)
+		left join photos p on(m.membreId = p.membreId)
+		left join user_hobby_link on (m.membreId = user_hobby_link.user_id)
+		left join hobby on (user_hobby_link.hobby_id = hobby.id)
+		where m.membreId = #{id}
+	</select>
+	
+	
+	<select id="getMembreByNickname" resultMap="MembreMap" parameterType="String">
+		select *,m.membreId as "m_membreId", c.description as "categorie_description" , n.description as "niveau_description",
+		       h.description as "hair_color_description",
+		       s.description as "skin_color_description",
+		       e.description as "eye_color_description",
+		       w. description as "weight_range_description",
+		       city.nom as "city_description",
+		       status.description as "status_description",
+		       hobby.description as "hobby_description"
+		       
+		from membre m
+		left join categorie c on(m.categorieId = c. categorieId)
+		left join niveaumembres n on (m.niveauMembreId = n.niveauMembreId)
+		left join hair_color h on (m.hair_color_id = h.id)
+		left join skin_color s on (m.skin_color_id = s.id)
+		left join eye_color e on (m.eye_color_id = e.id)
+		left join weight_range w on (m.weight_range_id = w.id)
+		left join city on (m.city_id = city.id)
+		left join status on(m.status_id = status.id)
+		left join photos p on(m.membreId = p.membreId)
+		left join user_hobby_link on (m.membreId = user_hobby_link.user_id)
+		left join hobby on (user_hobby_link.hobby_id = hobby.id)
+		where m.pseudo = #{nickname}
+	</select>
+	
+	
+		<select id="getMembreByNicknamePassword" resultMap="MembreMap" parameterType="hashmap">
+		select *,m.membreId as "m_membreId", c.description as "categorie_description" , n.description as "niveau_description",
+		       h.description as "hair_color_description",
+		       s.description as "skin_color_description",
+		       e.description as "eye_color_description",
+		       w. description as "weight_range_description",
+		       city.nom as "city_description",
+		       status.description as "status_description",
+		       hobby.description as "hobby_description"
+		       
+		from membre m
+		left join categorie c on(m.categorieId = c. categorieId)
+		left join niveaumembres n on (m.niveauMembreId = n.niveauMembreId)
+		left join hair_color h on (m.hair_color_id = h.id)
+		left join skin_color s on (m.skin_color_id = s.id)
+		left join eye_color e on (m.eye_color_id = e.id)
+		left join weight_range w on (m.weight_range_id = w.id)
+		left join city on (m.city_id = city.id)
+		left join status on(m.status_id = status.id)
+		left join photos p on(m.membreId = p.membreId)
+		left join user_hobby_link on (m.membreId = user_hobby_link.user_id)
+		left join hobby on (user_hobby_link.hobby_id = hobby.id)
+		where m.pseudo = #{pseudo_key} and m.password = #{pw_key}
+	</select>
+	
+	<select id="getFavorisByMembreId" parameterType="Integer" resultType="Membre">
+		SELECT * FROM membre
+		WHERE membreId IN (SELECT membreFavorise FROM 
+				membre 
+				RIGHT JOIN favoris ON (membreId = membreFavorisant)
+				WHERE membreId = #{id})
+	</select>
+	
+	
+	
+	<select id="getListeFavorisOnline" parameterType="Integer" resultType="Membre">
+		SELECT * FROM membre
+		WHERE membreId IN (SELECT membreFavorise FROM 
+						membre 
+						RIGHT JOIN favoris ON (membreId = membreFavorisant)
+						WHERE membreId = 1 )
+		AND isOnline = TRUE
+	</select>
+	
+	
+	
+	
+	<select id="recherche" parameterType="hashmap" resultMap="MembreMap">
+		select *,m.membreId as "m_membreId", 
+			   c.description as "categorie_description" , 
+			   n.description as "niveau_description",
+		       h.description as "hair_color_description",
+		       s.description as "skin_color_description",
+		       e.description as "eye_color_description",
+		       w. description as "weight_range_description",
+		       city.nom as "city_description",
+		       status.description as "status_description",
+		       hobby.description as "hobby_description"
+		from membre m
+		left join categorie c on(m.categorieId = c. categorieId)
+		left join niveaumembres n on (m.niveauMembreId = n.niveauMembreId)
+		left join hair_color h on (m.hair_color_id = h.id)
+		left join skin_color s on (m.skin_color_id = s.id)
+		left join eye_color e on (m.eye_color_id = e.id)
+		left join weight_range w on (m.weight_range_id = w.id)
+		left join city on (m.city_id = city.id)
+		left join status on(m.status_id = status.id)
+		left join photos p on(m.membreId = p.membreId)
+		left join user_hobby_link on (m.membreId = user_hobby_link.user_id)
+		left join hobby on (user_hobby_link.hobby_id = hobby.id)
+		<where>
+			<if test="categorie_id.length()!= 0">
+				c. categorieId = #{categorie_id}
+			</if>
+			<if test="ville_id.length()!=0">
+				AND city.id = #{ville_id}
+			</if>
+			<if test="tailleMin.length()!=0 &amp;&amp; tailleMax.length()!=0">
+				AND height BETWEEN #{tailleMin} AND #{tailleMax}
+			</if>
+			<if test="fumeur==true">
+				AND m.smoke = 1 
+			</if>
+
+			<if test="typePhysique_id.length()!=0">
+				AND m.weight_range_id = #{typePhysique_id}
+			</if>
+			<if test="status_id.length()!=0">
+				AND m.status_id = #{status_id}
+			</if>
+			<if test="hairColor_id.length()!=0">
+				AND m.hair_color_id = #{hairColor_id}
+			</if>
+			<if test="skinColor_id.length()!=0">
+				AND m.skin_color_id = #{skinColor_id}
+			</if>
+			<if test="eyeColor_id.length()!=0">
+				AND m.eye_color_id = #{eyeColor_id}
+			</if>
+			
+		</where>
+	</select>
+	
+	
+	
+	
+<!-- 	<insert id="addFavoris" parameterType="hashmap"> -->
+<!-- 		insert into favoris (dateAjout, membreFavorisant, membreFavorise) -->
+<!-- 			values (#{keyDateAjout}, #{keyMembreFavorisant}, #{keyMembreFavorise}) -->
+<!-- 	</insert> -->
+	
+<!-- 	<delete id="deleteFavoris" parameterType="hashmap"> -->
+<!-- 		delete from favoris -->
+<!-- 		where membreFavorisant= #{keyMembreFavorisant} and membreFavorise=#{keyMembreFavorise} -->
+<!-- 	</delete> -->
+
+	<delete id="deleteMembre" parameterType="Integer">
+		delete from membre
+		where membreId=#{id}
+	</delete>
+	
+	
+	<update id="updateOnline" parameterType="hashmap">
+        update membre
+        set isOnline=#{key_online}
+        where membreId=#{key_memberId}
+    </update>
+	
+	
+	<insert id="addMembre" parameterType="hashmap" useGeneratedKeys="true" keyProperty="membreId">
+		insert into membre (nom, prenom, description, pseudo, password, age, email, categorieId, isOnline,
+							niveauMembreId,hair_color_id, skin_color_id, eye_color_id,
+							height, weight_range_id, city_id, smoke, status_id,
+							informed_message_received,informed_added_by_others, informed_removed_by_others
+							)
+					values(	#{nom}, #{prenom}, #{description}, #{pseudo}, #{password}, #{age}, 
+							#{email}, #{categorieId}, #{isOnline}, #{niveauMembreId}, 
+							#{hair_color_id}, #{skin_color_id}, #{eye_color_id},
+							#{height}, #{weight_range_id}, #{city_id}, #{smoke}, #{status_id},
+							#{informed_message_received},#{informed_added_by_others}, #{informed_removed_by_others}
+							)
+		
+	</insert>
+	
+	<update id="updateMembre" parameterType="hashmap" >
+		update  membre SET pseudo=#{pseudo}, password=#{password}, email=#{email},
+							weight_range_id=#{weight}, city_id=#{ville}, smoke=#{fumeur}, status_id=#{status} 
+							WHERE membreId=#{userid} 	
+	</update>
+	
+<!-- 	  <insert id="addCmsPage" parameterType="CmsPage" useGeneratedKeys="true" keyProperty="id"> -->
+<!--         insert into cmspage (title, sefUrl_fr, sefUrl_en, content_fr, content_en, active) -->
+<!--             value (#{title}, #{sefUrlFr}, #{sefUrlEn}, #{contentFr}, #{contentEn}, #{active}) -->
+<!--     </insert> -->
+	
+	
+</mapper>

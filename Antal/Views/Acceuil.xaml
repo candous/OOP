@@ -1,0 +1,90 @@
+﻿<Window x:Class="Views.Acceuil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Acceuil" Height="768" Width="1024" ResizeMode="CanMinimize" >
+    <Grid>
+        <!--buttons de configuration -->
+        <Border BorderBrush="#FF0097E5" BorderThickness="0,0,0,1" Margin="0,0,0,690" HorizontalAlignment="Right" Width="1018">
+            <StackPanel HorizontalAlignment="Left" Height="50" Margin="153,0,0,0" VerticalAlignment="Top" Width="865" Orientation="Horizontal" >
+
+                <Label Content="Bienvenue ," Foreground="#FF0097E5"  HorizontalAlignment="Left"  VerticalAlignment="Center" Width="78" FontFamily="Verdana"/>
+                <Label Name="userName" Foreground="#FF0097E5"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="78" FontFamily="Verdana"/>
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="BtnComptes" HorizontalAlignment="Left" Height="42" Margin="550,0,0,0" VerticalAlignment="Top" Width="57" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="BtnComptes_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\compte.png" HorizontalAlignment="Center" Height="24"  Width="19" />
+                        <Label Content="Comptes" Foreground="#FF0097E5" HorizontalAlignment="Center"  Height="23" Width="57"  Margin="0,-5,0,0" FontSize="10" FontFamily="Verdana"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="BtnConfigurations" HorizontalAlignment="Center" Height="42"  VerticalAlignment="Top" Width="90" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="BtnConfigurations_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\config.png" HorizontalAlignment="Center" Height="24"  Width="19" />
+                        <Label Content="Configurations" Foreground="#FF0097E5" HorizontalAlignment="Center"  Height="23"  Margin="0,-5,0,0" FontSize="10" FontFamily="Verdana"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border>
+
+        <!-- Bouton du menu -->
+        <Border BorderBrush="#8f8f8f" BorderThickness="0,0,1,0" Margin="0,0,865,0" Background="White">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" >
+                <Image Source="images\logo.png" HorizontalAlignment="Center" Height="60"  VerticalAlignment="Top"  MouseDown="Image_MouseDown"/>
+                <Button Name="EtudiantMenu" Style="{StaticResource BtnStyleNoHover}" HorizontalAlignment="Center"  Margin="0,70,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="EtudiantMenu_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\etudiants.png"  HorizontalAlignment="Center" Height="40" />
+                        <Label Content="Étudiants"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana" />
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="EntrepriseMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="EntrepriseMenu_Click">
+                    <StackPanel Orientation="Vertical" >
+                        <Image Source="images\entreprises1.png"  HorizontalAlignment="Center" Height="40" />
+                        <Label Content="Entreprises"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana"  />
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="CommunicationMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="CommunicationMenu_Click">
+                    <StackPanel Orientation="Vertical" >
+                        <Image Source="images\communic.png"  HorizontalAlignment="Center" Height="40"  Margin="0,0,5,0"/>
+                        <Label Content="Communications"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana"  />
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="StageMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="StageMenu_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\journee.png"  HorizontalAlignment="Center" Height="40" />
+                        <Label Content="Stages"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana" />
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="StatistiquesMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="StatistiquesMenu_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\statistiques.png"  HorizontalAlignment="Center" Height="40" />
+                        <Label Content="Statistiques"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana"  />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border>
+        <Rectangle Fill="#eeeeee"  HorizontalAlignment="Left" Height="100" Margin="249,79,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label Name="NbEtudiantRecherche" Foreground="#FF0097E5" HorizontalAlignment="Left" Margin="308,111,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Verdana"/>
+        <Label Content="Étudiant à"  Foreground="#6c6c6c" HorizontalAlignment="Left" Margin="278,136,0,0" VerticalAlignment="Top" Height="24" FontFamily="Verdana" FontSize="12"/>
+        <Label Content="la recherche"  Foreground="#6c6c6c" HorizontalAlignment="Left" Margin="273,148,0,0" VerticalAlignment="Top" Height="24" FontFamily="Verdana" FontSize="12"/>
+        <Rectangle Fill="#eeeeee"  HorizontalAlignment="Left" Height="100" Margin="414,79,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label Name="NbEntrevue10jours" Foreground="#FF0097E5" HorizontalAlignment="Left" Margin="476,111,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Verdana"/>
+        <Label Content="Entrevue dans les"  Foreground="#6c6c6c" HorizontalAlignment="Left" Margin="423,136,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="12" Height="24"/>
+        <Label Content=" prochains 10 jours"  Foreground="#6c6c6c" HorizontalAlignment="Left" Margin="423,148,0,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="12" Height="24"/>
+        <Rectangle Fill="#eeeeee"  HorizontalAlignment="Left" Height="100" Margin="579,79,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label Name="NbCommunicationAttente" Foreground="#FF0097E5" HorizontalAlignment="Left" Margin="641,111,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Verdana"/>
+        <Label Content="Communications"  Foreground="#6c6c6c" HorizontalAlignment="Left" Margin="591,136,0,0" VerticalAlignment="Top" Height="24" FontSize="12" FontFamily="Verdana" Width="113"/>
+        <Label Content="en attentes"  Foreground="#6c6c6c" HorizontalAlignment="Left" Margin="609,148,0,0" VerticalAlignment="Top" Height="24" FontSize="12" FontFamily="Verdana" Width="95"/>
+        <Rectangle Fill="#eeeeee"  HorizontalAlignment="Left" Height="100" Margin="745,79,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label Name="NbEntrepriseEnregistre" Foreground="#FF0097E5" HorizontalAlignment="Left" Margin="808,111,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Verdana"/>
+        <Label Content="Entreprises"  Foreground="#6c6c6c" HorizontalAlignment="Left" Margin="774,136,0,0" VerticalAlignment="Top" Height="24" FontSize="12" FontFamily="Verdana" Width="84"/>
+        <Label Content="enregistrées"  Foreground="#6c6c6c" HorizontalAlignment="Left" Margin="774,148,0,0" VerticalAlignment="Top" Height="24" FontSize="12" FontFamily="Verdana" Width="84"/>
+        <Label Content="ÉTUDIANTS À LA RECHERCHE" Foreground="#8f8f8f" HorizontalAlignment="Left" Margin="166,287,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Verdana" Width="252"/>
+        <!-- liste etudiants dynamique -->
+        <ScrollViewer Margin="153,330,0,0" Width="865" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel Orientation="Vertical" Name="ListeEtudiantsVue"  Width="855" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0"/>
+
+
+        </ScrollViewer>
+    </Grid>
+
+</Window>

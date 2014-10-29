@@ -1,0 +1,51 @@
+﻿<Window x:Class="TpCSharp.Infos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Infos" Height="643.333" Width="600" Loaded="Window_Loaded_1"
+        Icon="images\photoProfile.ico">
+    <Window.Background>
+        <ImageBrush ImageSource="images\bg.jpg"/>
+    </Window.Background>
+    <Grid Name="grid" HorizontalAlignment="Right" Width="592" Height="769" VerticalAlignment="Top">
+        <Rectangle HorizontalAlignment="Left" Height="253" Margin="-66,-29,-30,0" Stroke="Black" VerticalAlignment="Top" Width="688" Opacity="0.1">
+
+        </Rectangle>
+        <Image Name="affichageImage" Source="{Binding UrlPhoto}" Stretch="UniformToFill" Height="224" VerticalAlignment="Bottom" Margin="0,0,0,545" HorizontalAlignment="Left" Width="592">
+            <Image.Effect>
+                <BlurEffect Radius="25"/>
+            </Image.Effect>
+        </Image>
+
+
+
+        <Ellipse Name="affichePhoto" Margin="231,19,231,620">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="{Binding UrlPhoto}" Stretch="Fill" />
+            </Ellipse.Fill>
+        </Ellipse>
+
+
+        <Label Name="nom"  HorizontalContentAlignment="Center" Content="{Binding Nom}" FontSize="36" Margin="157,154,157,545" Foreground="#FF0072E4" />
+        <Label Content="Compagnie : " FontSize="16" Margin="46,262,446,471"  Width="100"  Foreground="#FF0072E4"/>
+        <Label Name="compagine"  Content="{Binding Compagnie}" Width="120" FontSize="12"   Foreground="#FF38718B" Margin="159,262,313,471"/>
+        <Label Content="Site Web : " FontSize="16" Margin="302,262,190,471" Width="100"  Foreground="#FF0072E4"/>
+        <Label Name="siteweb" Content="{Binding SiteWeb}"   Foreground="#FF38718B" Margin="429,262,10,471" FontSize="12"/>
+        <Label Content="Cellulaire : " FontSize="16" Margin="46,303,446,430" Width="100" Foreground="#FF0072E4"/>
+        <Label Name="cellulaire" Content="{Binding Celulaire}" Width="120"   Foreground="#FF38718B" Margin="159,303,313,430" FontSize="12"/>
+        <Label Content="Telephonne :" FontSize="16" Margin="302,303,190,430" Width="100" Foreground="#FF0072E4"/>
+        <Label Name="telephonne" Content="{Binding Telephone}"   Foreground="#FF38718B" Margin="429,303,10,430" FontSize="12"/>
+        <Label Content="Courriel :" FontSize="16" Margin="46,344,446,389" Width="100"  Foreground="#FF0072E4"/>
+        <Label Name="courriel" Content="{Binding Courriel}" Width="120"   Foreground="#FF38718B" Margin="159,344,313,389" FontSize="12"/>
+        <Label Content="Date naiss :" FontSize="16" Margin="302,344,190,389" Width="100" Foreground="#FF0072E4"/>
+        <Label Name="datenaiss" Content="{Binding Aniversaire }"   Foreground="#FF38718B" Margin="429,344,10,389" FontSize="12"/>
+        <Label Content="Adresse : " FontSize="16" Margin="46,385,446,348"  Width="100" Foreground="#FF0072E4"/>
+        <Label Name="adresse" Content="{Binding Adresse }" Width="120"  Foreground="#FF38718B" Margin="157,385,315,348" FontSize="12"/>
+        <Label Content="Ville : " FontSize="16" Margin="302,385,190,348" Width="100"  Foreground="#FF0072E4"/>
+        <Label Name="ville" Content="{Binding Ville }"   Foreground="#FF38718B" Margin="429,385,10,348" FontSize="12"/>
+        <Label Content="Province :" FontSize="16" Margin="46,426,446,307" Width="100" Foreground="#FF0072E4"/>
+        <Label Name="province" Content="{Binding Province }"  Width="120"   Foreground="#FF38718B" Margin="157,426,315,307" FontSize="12"/>
+        <Label Content="Pays :" FontSize="16" Margin="302,426,190,307" Width="100" Foreground="#FF0072E4"/>
+        <Label Name="pays" Content="{Binding Pays }"   Foreground="#FF38718B" Margin="429,426,10,307" FontSize="12"/>
+        <Button Content="Modifier" Height="35" Background="#FF0072E4" Foreground="#FFF9F7F7" Margin="231,518,213,216" Click="Button_Click_1" />
+    </Grid>
+</Window>

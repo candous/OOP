@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:icecore="http://www.icefaces.org/icefaces/core"
+	xmlns:ace="http://www.icefaces.org/icefaces/components"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	>
+	
+<h:head>
+
+	<ice:outputStyle href="./xmlhttp/css/rime/rime.css" />
+	<meta charset="utf-8"/>
+		<title>Login - ISI Love</title>
+
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+			<meta name="apple-mobile-web-app-capable" content="yes"/>
+
+				<ice:outputStyle href="css/bootstrap.min.css" rel="stylesheet"
+					type="text/css" />
+				<ice:outputStyle href="css/bootstrap-responsive.min.css"
+					rel="stylesheet" type="text/css" />
+
+				<ice:outputStyle href="css/font-awesome.css" rel="stylesheet" />
+	<ice:outputStyle
+		href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
+		rel="stylesheet" />
+
+	<ice:outputStyle href="css/style.css" rel="stylesheet" type="text/css" />
+	<ice:outputStyle href="css/pages/signin.css" rel="stylesheet"
+		type="text/css" />
+</h:head>
+<h:body>
+	<h:form id="iceForm">
+		<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			
+			<a class="brand" action="index">
+				ISI LOVE			
+			</a>		
+			
+			
+				<ul class="nav pull-right">
+					<li>						
+						<ice:commandLink action="#{inscriptionBackingBean.signup}" value="Vous n'avez pas de compte?"></ice:commandLink>
+					</li>	
+					
+				</ul>
+				
+			
+	
+		</div>
+		
+	</div> 
+	
+</div> 
+
+<div id="welc">
+	<h1>Bienvenue à notre site de rencontre </h1>
+</div>
+<div class="account-container">
+	<div class="content clearfix">
+		
+	
+		
+			<h1>Membre Login</h1>		
+			
+			<div class="login-fields">
+				
+				<p>Veuillez fournir vos coordonnées</p>
+				
+				<div class="field">
+					<ice:outputLabel>Pseudo:</ice:outputLabel>
+					<ice:inputText type="text" id="username" name="username" value="#{membreBackingBean.pseudo}" placeholder="Username" styleClass="login username-field"></ice:inputText>
+				</div>
+				
+				<div class="field">
+				<ice:outputLabel>Mot de passe:</ice:outputLabel>
+					<ice:inputSecret type="password" id="password" name="password" value="#{membreBackingBean.password}" placeholder="Password" styleClass="login password-field"></ice:inputSecret>
+				</div> 
+				
+			</div> 
+			
+			<div class="login-actions">
+				<ice:commandButton  styleClass="button btn btn-success btn-large" value="Sign In" action="#{membreBackingBean.verifierLogin}" ></ice:commandButton>
+			</div> 
+	</div> 
+	
+</div> 
+
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="js/signin.js"></script>
+	</h:form>
+</h:body>
+</html>

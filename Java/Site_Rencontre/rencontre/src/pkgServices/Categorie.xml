@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.Categorie">
+	
+	<select id="getListeCategories" resultType="Categorie">
+		select * from categorie
+	</select>
+	
+	<select id="getCategorieById" parameterType="Integer" resultType="Categorie">
+		select * from categorie
+		where categorieId = #{id}
+	</select>
+	
+	
+	<select id="getCategorieByMemberId" parameterType="Integer" resultType="Categorie">
+		select c.categorieid, c.description 
+		from membre m
+		left join categorie c on (m.categorieid = c.categorieid)
+		where membreid = #{id}
+	</select>
+
+</mapper>

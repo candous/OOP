@@ -1,0 +1,164 @@
+﻿<Window x:Class="Views.ModifierEntrepriseVue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Modifier Entreprise" Height="768" Width="1024" ResizeMode="CanMinimize">
+    <Grid Margin="1,0,-1,0" RenderTransformOrigin="0.527,0.585">
+        <!--buttons de configuration -->
+        <Border BorderBrush="#FF0097E5" BorderThickness="0,0,0,1" Margin="0,0,0,690" HorizontalAlignment="Right" Width="1018">
+            <StackPanel HorizontalAlignment="Left" Height="50" Margin="153,0,0,0" VerticalAlignment="Top" Width="865" Orientation="Horizontal" >
+
+                <Label Content="Bienvenue ," Foreground="#FF0097E5"  HorizontalAlignment="Left"  VerticalAlignment="Center" Width="78" FontFamily="Verdana"/>
+                <Label Name="userName" Foreground="#FF0097E5"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="78" FontFamily="Verdana"/>
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="BtnComptes" HorizontalAlignment="Left" Height="42" Margin="550,0,0,0" VerticalAlignment="Top" Width="57" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="BtnComptes_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\compte.png" HorizontalAlignment="Center" Height="24"  Width="19" />
+                        <Label Content="Comptes" Foreground="#FF0097E5" HorizontalAlignment="Center"  Height="23" Width="57"  Margin="0,-5,0,0" FontSize="10" FontFamily="Verdana"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="BtnConfigurations" HorizontalAlignment="Center" Height="42"  VerticalAlignment="Top" Width="90" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="BtnConfigurations_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\config.png" HorizontalAlignment="Center" Height="24"  Width="19" />
+                        <Label Content="Configurations" Foreground="#FF0097E5" HorizontalAlignment="Center"  Height="23"  Margin="0,-5,0,0" FontSize="10" FontFamily="Verdana"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border>
+
+        <!-- Bouton du menu -->
+        <Border BorderBrush="#8f8f8f" BorderThickness="0,0,1,0" Margin="0,0,865,0" HorizontalAlignment="Right" Width="156" Background="White">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" >
+                <Image Source="images\logo.png" HorizontalAlignment="Center" Height="60"  VerticalAlignment="Top"  MouseDown="Image_MouseDown"/>
+                <Button Name="EtudiantMenu" Style="{StaticResource BtnStyleNoHover}" HorizontalAlignment="Center"  Margin="0,70,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="EtudiantMenu_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\etudiants.png"  HorizontalAlignment="Center" Height="40" />
+                        <Label Content="Étudiants"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana" />
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="EntrepriseMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="EntrepriseMenu_Click">
+                    <StackPanel Orientation="Vertical" >
+                        <Image Source="images\entreprises.png"  HorizontalAlignment="Center" Height="40" />
+                        <Label Content="Entreprises"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana"  />
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="CommunicationMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="CommunicationMenu_Click">
+                    <StackPanel Orientation="Vertical" >
+                        <Image Source="images\communic.png"  HorizontalAlignment="Center" Height="40"  Margin="0,0,5,0"/>
+                        <Label Content="Communications"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana"  />
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="StageMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="StageMenu_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\journee.png"  HorizontalAlignment="Center" Height="40" />
+                        <Label Content="Stages"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana" />
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource BtnStyleNoHover}" Name="StatistiquesMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="StatistiquesMenu_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\statistiques.png"  HorizontalAlignment="Center" Height="40" />
+                        <Label Content="Statistiques"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana"  />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border>
+
+        <!-- Contenu vue -->
+        <!-- Partie Gauche -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="153,54,0,0" Width="519">
+            <Label Content="AJOUTER ENTREPRISE" Foreground="#8f8f8f" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Verdana"/>
+
+            <!-- nom courriel photo et ajouter photo -->
+            <StackPanel Orientation="Horizontal" >
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" Margin="10,10,0,0">
+                        <Label Content="Nom*" Foreground="#FF0097E5" HorizontalAlignment="Left"  VerticalAlignment="Center" FontSize="12" FontFamily="Verdana"/>
+                        <TextBox Name="ChoixNomVue" HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="174" Background="#FFF8F8F8" BorderBrush="#FFEDEFF5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10,10,0,0">
+                        <Label Content="Courriel*" Foreground="#FF0097E5" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" FontFamily="Verdana"/>
+                        <TextBox Name="ChoixCourrielVue" HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="174" Background="#FFF8F8F8" BorderBrush="#FFEDEFF5"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="20,0,0,0" >
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Name="affichePhoto"  Width="100" Height="100">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="images\ProfilImageVide.png" Stretch="Fill" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Button Name="BtnChoisirPhoto" Content="Choisir Photo" Margin="35,0,0,0"  Width="100" Height="25" Click="BtnChoisirPhoto_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- telephone texte -->
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="Téléphone 1" Foreground="#FF0097E5" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Top" Width="137" FontSize="12" FontFamily="Verdana"/>
+                <Label Content="Téléphone 2" Foreground="#FF0097E5" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Top" Width="137" FontSize="12" FontFamily="Verdana"/>
+                <Label Content="Téléphone 3" Foreground="#FF0097E5" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Top"  Width="137" FontSize="12" FontFamily="Verdana"/>
+            </StackPanel>
+            <!-- telephone zone saisie -->
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="ChoixTel1Vue" HorizontalAlignment="Left" Margin="15,0,0,0" Height="23" Width="137" Background="#FFF8F8F8" BorderBrush="#FFEDEFF5"/>
+                <TextBox Name="ChoixTel2Vue" HorizontalAlignment="Left" Margin="15,0,0,0" Height="23" Width="137" Background="#FFF8F8F8" BorderBrush="#FFEDEFF5"/>
+                <TextBox Name="ChoixTel3Vue" HorizontalAlignment="Left" Margin="15,0,0,0" Height="23" Width="137" Background="#FFF8F8F8" BorderBrush="#FFEDEFF5"/>
+            </StackPanel>
+
+            <!-- adresse -->
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="Adresse" Foreground="#FF0097E5" Margin="10,0,0,0" FontSize="12" FontFamily="Verdana"/>
+                <TextBox Name="ChoixAdresseVue"  Height="23" Margin="10,0,0,0"   Width="433" Background="#FFF8F8F8" BorderBrush="#FFEDEFF5"/>
+            </StackPanel>
+
+            <!-- Ville -->
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="Ville" Foreground="#FF0097E5" Margin="10,0,0,0" FontSize="12" FontFamily="Verdana"/>
+                <TextBox Name="ChoixVilleVue"  Height="23" Margin="10,0,0,0"   Width="206" Background="#FFF8F8F8" BorderBrush="#FFEDEFF5"/>
+            </StackPanel>
+
+            <!-- Secteur -->
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="Secteur" Foreground="#FF0097E5" Margin="10,0,0,0" FontSize="12" FontFamily="Verdana"/>
+                <TextBox Name="ChoixSecteurVue"  Height="23" Margin="10,0,0,0"   Width="434" Background="#FFF8F8F8" BorderBrush="#FFEDEFF5"/>
+            </StackPanel>
+
+            <!-- Secteur -->
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Label Content="Langue parlée" Foreground="#FF0097E5" Margin="10,0,0,0" FontSize="12" FontFamily="Verdana"/>
+                <ComboBox Name="ChoixLangueVue"  Height="23" Margin="10,0,0,0"   Width="160" />
+            </StackPanel>
+
+            <!-- commentaires -->
+            <Label Content="COMMENTAIRES" Foreground="#8f8f8f" Margin="10,20,0,0" FontSize="15" FontFamily="Verdana"/>
+            <TextBox Name="ChoixCommentaireVue" HorizontalAlignment="Left" Height="192" Margin="10,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="499" Background="#FFF8F8F8" BorderBrush="#FFEDEFF5"/>
+
+        </StackPanel>
+
+        <!-- Contenu Partie Drotie -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="672,54,0,0" Width="344" Background="#FFF0EEEF">
+            
+            <!-- formations recherchees -->
+            <Label Content="FORMATIONS RECHERCHÉES" Foreground="#8f8f8f" HorizontalAlignment="Center" Margin="0,20,0,0" FontSize="15" FontFamily="Verdana"/>
+            <ListBox Name="ChoixFromationVue" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="324" SelectionMode="Multiple" Margin="10,0,0,0" Height="135"/>
+          
+            <!-- interets recherches -->
+            <Label Content="INTÉRÉTS RECHERCHÉS" Foreground="#8f8f8f" HorizontalAlignment="Center" Margin="0,30,0,0" FontSize="15" FontFamily="Verdana"/>
+            <ListBox Name="ChoixInteretVue" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="324" SelectionMode="Multiple" Margin="10,0,0,0" Height="135"/>
+
+            <!-- technologie recherchees -->
+            <Label Content="TECHNOLOGIES RECHERCHÉES" Foreground="#8f8f8f" HorizontalAlignment="Center" Margin="0,30,0,0" FontSize="15" FontFamily="Verdana"/>
+            <ListBox Name="ChoixTechnologieVue" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="324" SelectionMode="Multiple" Margin="10,0,0,0" Height="135"/>
+
+            <!-- Bouton Valider -->
+            <Button Name="BtnValiderModifier" Style="{StaticResource BtnStyleNoHover2}" HorizontalAlignment="Center" Height="60" Margin="0,30,0,0"  Width="60" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnValiderModifier_Click">
+                <Image Source="images\iconV.png" HorizontalAlignment="Center" Height="52" Width="52" />
+            </Button>
+
+
+        </StackPanel>
+
+
+
+       
+    </Grid>
+</Window>

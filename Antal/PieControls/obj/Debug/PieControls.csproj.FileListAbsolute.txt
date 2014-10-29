@@ -1,0 +1,5 @@
+C:\Users\rdeolive\Desktop\projet-final-isi\AntalFromStart\Antal\PieControls\obj\Debug\PieControls.csprojResolveAssemblyReference.cache
+C:\Users\rdeolive\Desktop\projet-final-isi\AntalFromStart\Antal\PieControls\obj\Debug\PieChart.g.cs
+C:\Users\rdeolive\Desktop\projet-final-isi\AntalFromStart\Antal\PieControls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\rdeolive\Desktop\projet-final-isi\AntalFromStart\Antal\PieControls\obj\Debug\PieControls_MarkupCompile.cache
+C:\Users\rdeolive\Desktop\projet-final-isi\AntalFromStart\Antal\PieControls\obj\Debug\PieControls_MarkupCompile.lref

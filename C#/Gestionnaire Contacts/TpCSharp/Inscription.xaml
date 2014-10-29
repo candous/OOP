@@ -1,0 +1,44 @@
+﻿<Window x:Class="TpCSharp.Inscription"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Inscription" Height="700" Width="600"
+        Icon="images\photoProfile.ico">
+    <Grid>
+        <Image Source="images\8.jpg" HorizontalAlignment="Left" Height="1905" Margin="-17,-22,-442,-1210" VerticalAlignment="Top" Width="1051"/>
+        <TextBox Name="txtCourriel" HorizontalAlignment="Left" Height="29" Margin="47,210,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="303" Opacity="0.5" BorderThickness="0" LostFocus="txtCourriel_LostFocus"/>
+        <Label Content="Courriel*" HorizontalAlignment="Left" Height="23" Margin="47,187,0,0" VerticalAlignment="Top" Width="92" FontSize="12"/>
+        <PasswordBox Name="txtPwd" HorizontalAlignment="Left" Height="29" Margin="370,210,0,0"  VerticalAlignment="Top" Width="161" Opacity="0.5" BorderThickness="0"/>
+        <Label Content="Password*" HorizontalAlignment="Left" Height="23" Margin="370,187,0,0" VerticalAlignment="Top" Width="92" FontSize="12"/>
+        <TextBox Name="txtNom" HorizontalAlignment="Left" Height="29" Margin="47,267,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="303" Opacity="0.5" BorderThickness="0"/>
+        <Label Content="Nom*" HorizontalAlignment="Left" Height="23" Margin="47,244,0,0" VerticalAlignment="Top" Width="92" FontSize="12" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Name="txtCompagnie" HorizontalAlignment="Left" Height="29" Margin="370,267,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="161" Opacity="0.5" BorderThickness="0"/>
+        <Label Content="Compagnie" HorizontalAlignment="Left" Height="23" Margin="370,244,0,0" VerticalAlignment="Top" Width="92" FontSize="12" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Name="txtCel" HorizontalAlignment="Left" Height="29" Margin="47,323,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="141" Opacity="0.5" BorderThickness="0"/>
+        <Label Content="Celulaire" HorizontalAlignment="Left" Height="23" Margin="47,300,0,0" VerticalAlignment="Top" Width="92" FontSize="12" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Name="txtTelephone" HorizontalAlignment="Left" Height="29" Margin="205,323,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="141" Opacity="0.5" BorderThickness="0"/>
+        <Label Content="Telephone" HorizontalAlignment="Left" Height="23" Margin="205,300,0,0" VerticalAlignment="Top" Width="92" FontSize="12" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Name="txtSite" HorizontalAlignment="Left" Height="29" Margin="47,380,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="303" Opacity="0.5" BorderThickness="0"/>
+        <Label Content="Site Web" HorizontalAlignment="Left" Height="23" Margin="47,357,0,0" VerticalAlignment="Top" Width="92" FontSize="12" RenderTransformOrigin="0.5,0.5"/>
+        <DatePicker Name="date" HorizontalAlignment="Left" Margin="370,323,0,0" VerticalAlignment="Top" Height="29" Width="161" Opacity="0.5"/>
+        <Label Content="Date de naissance" HorizontalAlignment="Left" Height="23" Margin="370,303,0,0" VerticalAlignment="Top" Width="129" FontSize="12" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Name="txtAdresse" HorizontalAlignment="Left" Height="29" Margin="47,437,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="303" Opacity="0.5" BorderThickness="0"/>
+        <Label Content="Adresse" HorizontalAlignment="Left" Height="23" Margin="47,414,0,0" VerticalAlignment="Top" Width="92" FontSize="12" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Name="txtVille" HorizontalAlignment="Left" Height="29" Margin="370,437,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="161" Opacity="0.5" BorderThickness="0"/>
+        <Label Content="Ville" HorizontalAlignment="Left" Height="23" Margin="370,414,0,0" VerticalAlignment="Top" Width="92" FontSize="12" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Name="txtProvince" HorizontalAlignment="Left" Height="29" Margin="47,489,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="217" Opacity="0.5" BorderThickness="0"/>
+        <Label Content="Province" HorizontalAlignment="Left" Height="23" Margin="47,466,0,0" VerticalAlignment="Top" Width="92" FontSize="12" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Name="txtPays" HorizontalAlignment="Left" Height="29" Margin="299,489,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="232" Opacity="0.5" BorderThickness="0"/>
+        <Label Content="Pays" HorizontalAlignment="Left" Height="23" Margin="299,466,0,0" VerticalAlignment="Top" Width="92" FontSize="12" RenderTransformOrigin="0.5,0.5"/>
+        <CheckBox Name="chkVisible" Content="Visible pour les autres users?" HorizontalAlignment="Left" Margin="47,535,0,0" VerticalAlignment="Top" Opacity="0.7"/>
+        <Button Name="btnChoixPhoto" Content="Choisir Photo" HorizontalAlignment="Left" Height="31" Margin="216,133,0,0" VerticalAlignment="Top" Width="161" Loaded="Button_Loaded_1" Background="#FF0097E5" Foreground="White" BorderThickness="0" FontSize="13" FontFamily="Verdana" Click="btnChoixPhoto_Click"/>
+        <Ellipse Name="affichePhoto" HorizontalAlignment="Left" Height="106" Margin="240,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="106" StrokeThickness="0">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="images\photoProfile.png" Stretch="Fill" />
+            </Ellipse.Fill>
+        </Ellipse>
+        <Button Name="btnInscrire" Content="Inscrire" HorizontalAlignment="Left" Height="31" Margin="216,591,0,0" VerticalAlignment="Top" Width="161" Loaded="Button_Loaded_1" Background="#FF0097E5" Foreground="White" BorderThickness="0" FontSize="13" FontFamily="Verdana" Click="btnInscrire_Click"/>
+        <TextBlock Name="txtMsgErreur" HorizontalAlignment="Left" Margin="47,628,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="35" Width="484"/>
+
+
+    </Grid>
+</Window>

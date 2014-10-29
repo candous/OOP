@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mindescape.vue.JeuActivity" >
+
+    <FrameLayout
+        android:id="@+id/FrameLayoutJeu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/animImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/imageChemin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/clefImgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:src="@drawable/cle" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/affichageCle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/clef"
+            android:layout_width="32dp"
+            android:layout_height="36dp"
+            android:src="@drawable/cle" />
+
+        <TextView
+            android:id="@+id/nbClef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="32sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Carte" />
+
+    <LinearLayout
+        android:id="@+id/affichageRepere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/nbRepere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="32sp" />
+
+        <ImageView
+            android:id="@+id/txtNbRepere"
+            android:layout_width="32dp"
+            android:layout_height="36dp"
+            android:src="@drawable/test" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/Framerepere"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/imgRepere"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/test" />
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+
+/********************nos services*******************/
+.caroussel_elements {
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+
+	margin-left: 260px;
+	
+}
+.caroussel_elements .arrow_img {
+	position: absolute;
+	top: 8px;
+	left: 5px;
+}
+.caroussel_elements .arrow_img .arrow_on {
+	display: none;
+}
+.caroussel_elements.marion .arrow_img .arrow_on {
+	display: block;
+}
+.caroussel_elements.marion .arrow_img .arrow_off {
+	display: none;
+}
+.caroussel_elements h2 {
+	padding-left: 25px;
+	cursor: pointer;
+
+}
+.caroussel_elements ul {
+	padding-top: 10px;
+	margin-left: 30px;
+	display: none;
+	
+	width:1080px
+	}
+	.caroussel_elements ul  li{
+	height: 50px;
+	}
+	/*******************************************/
+.caroussel_element {
+	position: relative;
+background-color: white;
+z-index:100;
+border-radius: 8px;	
+}
+.caroussel_element .arrow_img {
+	position: absolute;
+	top: 8px;
+	left: 5px;
+}
+.caroussel_element .arrow_img .arrow_on {
+	display: none;
+}
+.caroussel_element.marion .arrow_img .arrow_on {
+	display: block;
+}
+.caroussel_element.marion .arrow_img .arrow_off {
+	display: none;
+}
+.caroussel_element h2 {
+	padding-left: 25px;
+	cursor: pointer;
+
+}
+.caroussel_element ul {
+	padding-top: 10px;
+	margin-left: 30px;
+	display: none;
+}

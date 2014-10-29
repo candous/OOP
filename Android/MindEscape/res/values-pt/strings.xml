@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MindEscape</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_level">LevelActivity</string>
+    <string name="choisissez_le_niveau">Escola o nível</string>
+    <string name="title_activity_game_over">GameOverActivity</string>
+    <string name="title_activity_form">FormActivity</string>
+    <string name="title_activity_scores">ScoresActivity</string>
+    <string name="niveau_1">Nível 1</string>
+    <string name="niveau_2">Nível 2</string>
+    <string name="niveau_3">Nível 3</string>
+    <string name="votre_score">Seus Pontos</string>
+    <string name="temps">Tempo</string>
+    <string name="enregistrer">Salvar</string>
+    <string name="jouer_encore">Jogar</string>
+    <string name="nouveau_record">NOVO RECORDE</string>
+    <string name="prenom">Nome</string>
+    <string name="nom">Sobrenome</string>
+    <string name="niveau">Nível</string>
+    <string name="deplacements">Movimentos</string>
+    <string name="menu">Menu</string>
+
+</resources>

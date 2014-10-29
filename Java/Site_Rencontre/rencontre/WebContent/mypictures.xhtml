@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:icecore="http://www.icefaces.org/icefaces/core"
+	xmlns:ace="http://www.icefaces.org/icefaces/components"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	>
+	
+<h:head>
+
+	<ice:outputStyle href="./xmlhttp/css/rime/rime.css" />
+	   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil</title>
+	<!-- BOOTSTRAP STYLES-->
+    <ice:outputStyle href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <ice:outputStyle href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- MORRIS CHART STYLES-->
+    <ice:outputStyle href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <ice:outputStyle href="assets/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <ice:outputStyle href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <ice:outputStyle rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+     <ice:outputStyle rel="stylesheet" href="dcss/bootstrap.min.css"/>
+        <ice:outputStyle rel="stylesheet" href="dcss/font-awesome.css"/>
+        <ice:outputStyle rel="stylesheet" href="dcss/animate.css"/>
+        <ice:outputStyle rel="stylesheet" href="dcss/templatemo_misc.css"/>
+        <ice:outputStyle rel="stylesheet" href="dcss/templatemo_style.css"/>
+	<ice:outputStyle href="./xmlhttp/xcssss/rime/rime.css" />
+	<ice:outputStyle href="xcssss/bootstrap.min.css" rel="stylesheet" />
+	<ice:outputStyle href="xcssss/bootstrap-responsive.min.css" rel="stylesheet" />
+
+	<ice:outputStyle href="http://fonts.googleapis.com/xcssss?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+	<ice:outputStyle href="xcssss/font-awesome.css" rel="stylesheet" />
+	<ice:outputStyle href="xcssss/style.css" rel="stylesheet" />
+	
+	 <ice:outputStyle href="assets/css/bootstrap.css" rel="stylesheet" />
+	
+     <!-- FONTAWESOME STYLES-->
+    <ice:outputStyle href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- MORRIS CHART STYLES-->
+    <ice:outputStyle href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <ice:outputStyle href="assets/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <ice:outputStyle href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   
+   <ice:outputStyle rel="stylesheet" href="xcss/style.css"/>
+    
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+</h:head>
+<h:body>
+	<h:form id="iceForm">
+		 <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">ISI Love</a> 
+            </div>
+  <div style="color: white;
+padding: 15px 50px 5px 50px;
+float: right;
+font-size: 16px;"> <ice:commandLink  value="Déconnexion" action="#{membreBackingBean.logOut}" styleClass="btn btn-danger square-btn-adjust"></ice:commandLink> </div>
+        </nav>   
+          <!-- /. NAV TOP  -->
+
+			<nav class="navbar-default navbar-side" role="navigation">
+			<div class="sidebar-collapse">
+				<ul class="nav" id="main-menu">
+					<li class="text-center"><h:graphicImage
+							styleClass="user-image img-responsive"
+							value="#{membreBackingBean.photoProfile}" /></li>
+					<li><ice:commandLink id="titre" value="tableau de bord"
+							action="#{membreBackingBean.afficherTableau}">
+							<div style="position: absolute; left: 190px; top: -2px">
+								<i class="fa fa-dashboard fa-3x"></i>
+							</div>
+						</ice:commandLink></li>
+					<li><ice:commandLink  value="Messages" id="titreun"
+							action="#{membreBackingBean.afficherMessages}">
+							<div style="position: absolute; left: 200px; bottom: 20px;">
+								<i class="icon-large icon-envelope"></i>
+							</div>
+						</ice:commandLink></li>
+					<li><ice:commandLink  value="Favoris"
+							id="titredeux" action="#{membreBackingBean.afficherFavoris}">
+							<div style="position: absolute; left: 200px; bottom: 20px;">
+								<i class="shortcut-icon icon-bookmark"></i>
+							</div>
+						</ice:commandLink></li>
+					<li><ice:commandLink value="Recherche" id="titretrois"
+							action="#{membreBackingBean.afficherRecherche}">
+							<div style="position: absolute; left: 200px; bottom: 20px;">
+								<i class="icon-large icon-search"></i>
+							</div>
+						</ice:commandLink></li>
+					<li><ice:commandLink styleClass="active-menu" value="Mes photos" id="titrequatre"
+							action="#{membreBackingBean.afficherPhotos}">
+							<div style="position: absolute; left: 200px; bottom: 20px;">
+								<i class="shortcut-icon icon-picture"></i>
+							</div>
+						</ice:commandLink></li>
+					<li><ice:commandLink value="Configurations" id="titrecinque"
+							action="#{membreBackingBean.afficherConfigs}">
+							<i class="icon-large icon-cog" id="iconsix"></i>
+						</ice:commandLink></li>
+				</ul>
+			</div>
+			</nav>
+			<!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                     <h:outputText styleClass="h2" value="Mes photos"></h:outputText>   
+                     
+                    </div>
+                </div>              
+                 <!-- /. ROW  -->
+                  <hr />
+                    <div class="form-group">
+  <ice:panelGroup>
+  
+  <hr/>
+     
+     <h4>telecharger photo</h4>
+             	<ace:fileEntry styleClass="btn btn-default btn-lg col-md-6 col-sm-6 col-xs-6" id="pm" fileEntryListener="#{photoBackingBean.uploadFileMembre}" relativePath="photos" useSessionSubdir="false" partialSubmit="true" ></ace:fileEntry>
+             	<h:commandButton styleClass="btn btn-default btn-lg col-md-6 col-sm-6 col-xs-6" type="submit" value="Enregistrer votre photo"></h:commandButton>
+       			
+       			</ice:panelGroup>
+  </div>
+  <hr/>
+  <br/>
+   <br/>
+    <br/>
+   <br/>
+    <br/>
+   
+  <ui:repeat var="photo" value="#{membreBackingBean.membre.listePhotos}">
+	<div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <ice:graphicImage value="#{photo.chemin}" style="width:250px;height:300px;"></ice:graphicImage> 
+                            
+                            <div class="portfolio-overlay">
+                                
+                                <a href="#{photo.chemin}" data-rel="lightbox" class="expand">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                                
+                   
+                            </div> <!-- /.portfolio-overlay-->
+                        </div> <!-- /.portfolio-thumb -->
+                         <div class="col" style="position:absolute;top:250px;left:65px;">
+         				<ice:commandButton action="#{photoBackingBean.supprimerPhoto(photo)}" value="Supprimer photo" styleClass="btn btn-danger btn-sm" ></ice:commandButton>
+         			</div>
+                    </div> <!-- /.portfolio-item -->
+                    
+           	 </ui:repeat> 	 
+
+  	
+</div>
+</div>
+</div>
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+     <!-- MORRIS CHART SCRIPTS -->
+     <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    	<script type="text/javascript" src="fancybox/jquery-1.4.3.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	
+	<script type="text/javascript" src="java.js"></script>
+	
+	
+	<script src="jsx/vendor/jquery-1.11.0.min.js"></script>
+        <script src="jsx/bootstrap.js"></script>
+        <script src="jsx/plugins.js"></script>
+        <script src="jsx/main.js"></script>
+	
+	</h:form>
+</h:body>
+</html>

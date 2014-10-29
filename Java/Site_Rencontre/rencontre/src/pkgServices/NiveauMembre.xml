@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.NiveauMembre">
+	
+	<select id="getListeNiveauMembres" resultType="NiveauMembre">
+		select * from NiveauMembres
+	</select>
+	
+<!-- 	<select id="getCategorieById" parameterType="Integer" resultType="Categorie"> -->
+<!-- 		select * from categorie -->
+<!-- 		where categorieId = #{id} -->
+<!-- 	</select> -->
+	
+	
+	<select id="getNiveauMembreByMemberId" parameterType="Integer" resultType="NiveauMembre">
+		SELECT n.niveaumembreid, n.description, n.nbphotosMax, nbFavorisMax, droitEnvoyerMsg 
+		FROM membre m
+		LEFT JOIN NiveauMembres n ON (m.niveaumembreid = n.niveaumembreid)
+		WHERE membreid = #{id}
+	</select>
+	
+	
+	<select id="getNiveauMembreById" resultType="NiveauMembre" parameterType="Integer">
+		select * from NiveauMembres
+		where niveauMembreId = #{id}
+	</select>
+	
+
+</mapper>

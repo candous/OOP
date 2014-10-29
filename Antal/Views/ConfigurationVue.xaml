@@ -1,0 +1,258 @@
+﻿<Window x:Class="Views.ConfigurationVue"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="MainWindow" Height="768" Width="1024">
+    <Grid>
+        <!--buttons de configuration -->
+        <Border BorderBrush="#FF0097E5" BorderThickness="0,0,0,1" Margin="0,0,0,690" HorizontalAlignment="Right" Width="1018">
+            <StackPanel HorizontalAlignment="Left" Height="50" Margin="153,0,0,0" VerticalAlignment="Top" Width="865" Orientation="Horizontal" >
+
+                <Label Content="Bienvenue ," Foreground="#FF0097E5"  HorizontalAlignment="Left"  VerticalAlignment="Center" Width="78" FontFamily="Verdana"/>
+                <Label Name="userName" Foreground="#FF0097E5"  HorizontalAlignment="Left" VerticalAlignment="Center" Width="78" FontFamily="Verdana"/>
+                <Button Name="BtnComptes" HorizontalAlignment="Left" Height="42" Margin="550,0,0,0" VerticalAlignment="Top" Width="57" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\compte.png" HorizontalAlignment="Center" Height="24"  Width="19" />
+                        <Label Content="Comptes" Foreground="#FF0097E5" HorizontalAlignment="Center"  Height="23" Width="57"  Margin="0,-5,0,0" FontSize="10" FontFamily="Verdana"/>
+                    </StackPanel>
+                </Button>
+
+
+            </StackPanel>
+        </Border>
+
+        <!-- Bouton du menu -->
+        <Border BorderBrush="#8f8f8f" BorderThickness="0,0,1,0" Margin="0,0,865,0" HorizontalAlignment="Right" Width="156" Background="White">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" >
+                <Image Source="images\logo.png" HorizontalAlignment="Center" Height="98"  VerticalAlignment="Top" Width="63" MouseDown="Image_MouseDown"/>
+                <Button Name="EtudiantMenu" HorizontalAlignment="Center"  Margin="0,70,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="EtudiantMenu_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\etudiants.png"  HorizontalAlignment="Center" Height="40" Width="31"/>
+                        <Label Content="Étudiants"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana" />
+                    </StackPanel>
+                </Button>
+                <Button Name="EntrepriseMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="EntrepriseMenu_Click">
+                    <StackPanel Orientation="Vertical" >
+                        <Image Source="images\entreprises1.png"  HorizontalAlignment="Center" Height="40" Width="31"/>
+                        <Label Content="Entreprises"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana"  />
+                    </StackPanel>
+                </Button>
+                <Button Name="CommunicationMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="CommunicationMenu_Click">
+                    <StackPanel Orientation="Vertical" >
+                        <Image Source="images\communic.png"  HorizontalAlignment="Center" Height="40" Width="31" Margin="0,0,5,0"/>
+                        <Label Content="Communications"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana"  />
+                    </StackPanel>
+                </Button>
+                <Button Name="StageMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="StageMenu_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\journee.png"  HorizontalAlignment="Center" Height="40" Width="31"/>
+                        <Label Content="Stages"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana"  />
+                    </StackPanel>
+                </Button>
+                <Button Name="StatistiquesMenu" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" Width="114" Background="{x:Null}" Height="70" BorderBrush="{x:Null}" Click="StatistiquesMenu_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="images\statistiques.png"  HorizontalAlignment="Center" Height="40" Width="31"/>
+                        <Label Content="Statistiques"  Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="12" FontFamily="Verdana"  />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Border>
+        <!-- Zone a modifier -->
+        <Grid HorizontalAlignment="Left" Height="697" Margin="153,42,0,0" VerticalAlignment="Top" Width="865">
+
+            <ScrollViewer Margin="0,0,0,10">
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="1000">
+
+                    <!-- conteneur horizontal 1 -->
+
+                    <!-- conteneur horizontal 1 -->
+                    <!-- conteneur horizontal 1 -->
+                    <Label Content="CONFIGURATIONS"  Foreground="#8f8f8f" FontSize="15" FontFamily="Verdana" Height="53"/>
+
+                    <!-- conteneur horizontal 1 -->
+                    <StackPanel Orientation="Horizontal"  >
+                        <!-- formation -->
+                        <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="00,0,0,0">
+                                <Label Content="FORMATION" Foreground="#8f8f8f" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Verdana"/>
+                                <Button x:Name="BtnAjouterFormation" Style="{StaticResource BtnStyleNoHover2}" HorizontalAlignment="Left" Height="42" Margin="10,0,0,0" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnAjouterFormation_Click"  >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="images\icon+.png"  HorizontalAlignment="Center" Height="25" Width="25" />
+                                        <Label Content="Ajouter" Foreground="#FF0097E5"  HorizontalAlignment="Left" VerticalAlignment="Center"  FontFamily="Verdana"/>
+                                    </StackPanel>
+                                </Button>
+                                <TextBox x:Name="choixAjouterFormation" Width="100" Height="25" Margin="10,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="Programme"  Margin="30,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                                <Label Content="Supprimer" Margin="0,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                            </StackPanel>
+                            <ScrollViewer HorizontalAlignment="Left" Height="100" Margin="0,0,0,0"  Width="400" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                <StackPanel x:Name="ListeFormationVue" Orientation="Vertical" HorizontalAlignment="Left" Width="400"/>
+                            </ScrollViewer>
+                        </StackPanel>
+
+                        <!-- langue -->
+                        <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="LANGUE" Foreground="#8f8f8f" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Verdana"/>
+                                <Button x:Name="BtnAjouterLangue" Style="{StaticResource BtnStyleNoHover2}" HorizontalAlignment="Left" Height="42" Margin="10,0,0,0" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnAjouterLangue_Click"  >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="images\icon+.png"  HorizontalAlignment="Center" Height="25" Width="25" />
+                                        <Label Content="Ajouter" Foreground="#FF0097E5"  HorizontalAlignment="Left" VerticalAlignment="Center"  FontFamily="Verdana"/>
+                                    </StackPanel>
+                                </Button>
+                                <TextBox x:Name="choixAjouterLangue" Width="100" Height="25" Margin="10,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="Langue"  Margin="30,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                                <Label Content="Supprimer" Margin="70,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                            </StackPanel>
+                            <ScrollViewer HorizontalAlignment="Left" Height="100" Margin="0,0,0,0"  Width="400" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                <StackPanel x:Name="ListeLangueVue" Orientation="Vertical" HorizontalAlignment="Left" Width="400"/>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- conteneur horizontal 2 -->
+                    <StackPanel Orientation="Horizontal" Margin="0,40,0,0" >
+                        <!-- Type communication -->
+                        <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="TYPE COMMUNICATION" Foreground="#8f8f8f" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Verdana"/>
+                                <Button x:Name="BtnAjouterTypeCommunication" Style="{StaticResource BtnStyleNoHover2}" HorizontalAlignment="Left" Height="42" Margin="10,0,0,0" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnAjouterTypeCommunication_Click"  >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="images\icon+.png"  HorizontalAlignment="Center" Height="25" Width="25" />
+                                        <Label Content="Ajouter" Foreground="#FF0097E5"  HorizontalAlignment="Left" VerticalAlignment="Center"  FontFamily="Verdana"/>
+                                    </StackPanel>
+                                </Button>
+                                <TextBox x:Name="choixAjouterCommunication" Width="100" Height="25" Margin="10,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="Type Communication"  Margin="30,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                                <Label Content="Supprimer" Margin="70,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                            </StackPanel>
+                            <ScrollViewer HorizontalAlignment="Left" Height="100" Margin="0,0,0,0"  Width="400" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                <StackPanel x:Name="ListeTypeCommunicationVue" Orientation="Vertical" HorizontalAlignment="Left" Width="400"/>
+                            </ScrollViewer>
+                        </StackPanel>
+
+                        <!-- statusCarriere -->
+                        <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="STATUS CARRIERE" Foreground="#8f8f8f" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Verdana"/>
+                                <Button x:Name="BtnAjouterStatusCarriere" Style="{StaticResource BtnStyleNoHover2}" HorizontalAlignment="Left" Height="42" Margin="10,0,0,0" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnAjouterStatusCarriere_Click" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="images\icon+.png"  HorizontalAlignment="Center" Height="25" Width="25" />
+                                        <Label Content="Ajouter" Foreground="#FF0097E5"  HorizontalAlignment="Left" VerticalAlignment="Center"  FontFamily="Verdana"/>
+                                    </StackPanel>
+                                </Button>
+                                <TextBox x:Name="choixAjouterCarriere" Width="100" Height="25" Margin="10,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="Status Carriere"  Margin="30,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                                <Label Content="Supprimer" Margin="70,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                            </StackPanel>
+                            <ScrollViewer HorizontalAlignment="Left" Height="100" Margin="0,0,0,0"  Width="400" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                <StackPanel x:Name="ListeStatusCarriereVue" Orientation="Vertical" HorizontalAlignment="Left" Width="400"/>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </StackPanel>
+
+
+                    <!-- conteneur horizontal 3 -->
+                    <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
+                        <!-- typeStage -->
+                        <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="TYPE STAGE" Foreground="#8f8f8f" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Verdana"/>
+                                <Button x:Name="BtnAjouterTypeStage" Style="{StaticResource BtnStyleNoHover2}" HorizontalAlignment="Left" Height="42" Margin="10,0,0,0" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnAjouterTypeStage_Click"  >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="images\icon+.png"  HorizontalAlignment="Center" Height="25" Width="25" />
+                                        <Label Content="Ajouter" Foreground="#FF0097E5"  HorizontalAlignment="Left" VerticalAlignment="Center"  FontFamily="Verdana"/>
+                                    </StackPanel>
+                                </Button>
+                                <TextBox x:Name="choixAjouterStage" Width="100" Height="25" Margin="10,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="Type Stage"  Margin="30,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                                <Label Content="Supprimer" Margin="70,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                            </StackPanel>
+                            <ScrollViewer HorizontalAlignment="Left" Height="100" Margin="0,0,0,0"  Width="400" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                <StackPanel x:Name="ListeTypeStageVue" Orientation="Vertical" HorizontalAlignment="Left" Width="400"/>
+                            </ScrollViewer>
+                        </StackPanel>
+
+                        <!-- resultat -->
+                        <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="RESULTAT" Foreground="#8f8f8f" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Verdana"/>
+                                <Button x:Name="BtnAjouterResultat" Style="{StaticResource BtnStyleNoHover2}" HorizontalAlignment="Left" Height="42" Margin="10,0,0,0" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnAjouterResultat_Click" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="images\icon+.png"  HorizontalAlignment="Center" Height="25" Width="25" />
+                                        <Label Content="Ajouter" Foreground="#FF0097E5"  HorizontalAlignment="Left" VerticalAlignment="Center"  FontFamily="Verdana"/>
+                                    </StackPanel>
+                                </Button>
+                                <TextBox x:Name="choixAjouterResultat" Width="100" Height="25" Margin="10,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="Resultat"  Margin="30,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                                <Label Content="Supprimer" Margin="70,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                            </StackPanel>
+                            <ScrollViewer HorizontalAlignment="Left" Height="100" Margin="0,0,0,0"  Width="400" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                <StackPanel x:Name="ListeResultatVue" Orientation="Vertical" HorizontalAlignment="Left" Width="400"/>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </StackPanel>
+
+
+                    <!-- conteneur horizontal 4 -->
+                    <StackPanel Orientation="Horizontal" Margin="0,40,0,0" >
+                        <!-- typeEntrevue -->
+                        <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="TYPE ENTREVUE" Foreground="#8f8f8f" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Verdana"/>
+                                <Button x:Name="BtnAjouterTypeEntrevue" HorizontalAlignment="Left" Height="42" Margin="10,0,0,0" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnAjouterTypeEntrevue_Click" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="images\icon+.png"  HorizontalAlignment="Center" Height="25" Width="25" />
+                                        <Label Content="Ajouter" Foreground="#FF0097E5"  HorizontalAlignment="Left" VerticalAlignment="Center"  FontFamily="Verdana"/>
+                                    </StackPanel>
+                                </Button>
+                                <TextBox x:Name="choixAjouterEntrevue" Width="100" Height="25" Margin="10,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="Type Stage"  Margin="30,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                                <Label Content="Supprimer" Margin="70,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                            </StackPanel>
+                            <ScrollViewer HorizontalAlignment="Left" Height="100" Margin="0,0,0,0"  Width="400" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                <StackPanel x:Name="ListeTypeEntrevueVue" Orientation="Vertical" HorizontalAlignment="Left" Width="400"/>
+                            </ScrollViewer>
+                        </StackPanel>
+
+                        <!-- typeDocument  -->
+                        <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0">
+                                <Label Content="TYPE DOCUMENT" Foreground="#8f8f8f" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" FontSize="15" FontFamily="Verdana"/>
+                                <Button x:Name="BtnAjouterDocument" HorizontalAlignment="Left" Height="42" Margin="10,0,0,0" VerticalAlignment="Top"  Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnAjouterDocument_Click" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="images\icon+.png"  HorizontalAlignment="Center" Height="25" Width="25" />
+                                        <Label Content="Ajouter" Foreground="#FF0097E5"  HorizontalAlignment="Left" VerticalAlignment="Center"  FontFamily="Verdana"/>
+                                    </StackPanel>
+                                </Button>
+                                <TextBox x:Name="choixAjouterDocument" Width="100" Height="25" Margin="10,0,0,0"/>
+                            </StackPanel>
+                            <StackPanel Background="#FFE8E8E8" Orientation="Horizontal" Margin="0,0,0,0" Width="400">
+                                <Label Content="Resultat"  Margin="30,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                                <Label Content="Supprimer" Margin="70,0,0,0" Foreground="#FF0097E5" HorizontalAlignment="Center" FontSize="13" FontFamily="Verdana"  />
+                            </StackPanel>
+                            <ScrollViewer HorizontalAlignment="Left" Height="100" Margin="0,0,0,0"  Width="400" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                <StackPanel x:Name="ListeDocumentVue" Orientation="Vertical" HorizontalAlignment="Left" Width="400"/>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+
+
+        </Grid>
+    </Grid>
+</Window>

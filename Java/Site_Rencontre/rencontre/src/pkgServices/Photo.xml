@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.Photo">
+<resultMap type="Photo" id="resultPhoto">
+<id column="photoid" property="id"/>
+<result column="memberId" property="memberID"/>
+<result column="chemin" property="chemin"/>
+<result column="isprofil" property="isProfil"/>
+</resultMap>
+
+	<select id="getPhotosByMemberId" resultType="Photo" resultMap="resultPhoto">
+		select * from photos
+		where membreId = #{membreId}
+	</select>
+	
+	<select id="getProfilPhotoByMemberId" resultType="Photo" resultMap="resultPhoto">
+		select * from photos
+		where membreId = #{membreId}
+		and isprofil IS TRUE
+	</select>
+	
+	<insert id="addPhoto" parameterType="Photo">
+		insert into photos (membreId, chemin, isprofil)
+			values(#{memberID}, #{chemin}, #{isProfil})
+	</insert>
+	
+	<delete id="deletePhoto" parameterType="Integer">
+		delete from photos
+		where photoid = #{id}
+	</delete>
+	
+</mapper>

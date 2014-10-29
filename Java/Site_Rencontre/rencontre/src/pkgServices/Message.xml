@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.Message">
+	
+	<select id="getMessageById" parameterType="Integer" resultType="Message">
+		select * from messages
+		where messageid = #{id}
+	</select>
+	
+	
+	
+	<select id="getListeMessagesRecusByMemberId" parameterType="Integer" resultType="Message">
+		select * from messages
+		where msgTo = #{id}
+	</select>
+	
+	<select id="getMessagesPasLus" parameterType="Integer" resultType="Message">
+		select * from messages
+		where msgTo = #{id} and dejalu = 0
+	</select>
+	
+	<select id="getListeMessagesEnvoyesByMemberId" parameterType="Integer" resultType="Message">
+		select * from messages
+		where msgFrom = #{id}
+	</select>
+	
+	
+	<select id="getListeMessagesByMembers" parameterType="hashmap" resultType="Message">
+		select * from messages
+		where msgTo = #{key_to} and msgFrom = #{key_from}
+	</select>
+	
+	
+	
+	<insert id="addMessage" parameterType="Message">
+		insert into messages (msgFrom, msgTo, replyToMsgId, sendDate, contenu, dejalu)
+		 values (#{msgFrom}, #{msgTo}, #{replyToMsgId}, #{sendDate}, #{contenu}, #{dejalu})
+	</insert>
+	
+
+	<update id="marquerMessages" parameterType="hashmap">
+		update messages
+		set dejalu=#{key_dejalu}
+		where msgTo =#{key_toId}
+	</update>
+	
+	
+	
+	 <delete id="deleteMessage" parameterType="Message">
+        delete
+        from messages
+        where messageid=#{messageid}
+
+    </delete>
+</mapper>

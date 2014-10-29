@@ -1,0 +1,20 @@
+﻿<Window x:Class="Views.Connection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       Title="MainWindow" Height="768" Width="1024" ResizeMode="CanMinimize">
+    <Grid>
+        <Image Source="images\loginPageBG.png" HorizontalAlignment="Center" Stretch="Fill" VerticalAlignment="Center" Width="1018" />
+        <Label Content="Utilisateur ou mot de passe incorrecte" Name="msgerreur" Visibility="Hidden" Foreground="silver" HorizontalAlignment="center" VerticalAlignment="Top" Height="24" Width="247" FontSize="12" FontFamily="Verdana" Margin="400,242,371,0" />
+        <Image Source="images\iconX.png" HorizontalAlignment="Center" Name="imgerreur" Visibility="Hidden"  VerticalAlignment="Center" Height="29" Margin="507,208,482,506" Width="29" />
+        <TextBox x:Name="utilisateur" Background="Silver" HorizontalAlignment="Left" Height="33" Margin="419,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="22" FontFamily="Calibri" Opacity="0.7" BorderThickness="0" SelectionOpacity="0.7" SelectionBrush="#FF0097E5"/>
+        <Image Source="images\iconUser.png" HorizontalAlignment="Center"  VerticalAlignment="Center"  Margin="377,319,609,387"  />
+        <PasswordBox x:Name="txtPwd" Background="Silver" HorizontalAlignment="Left" Margin="419,390,0,0" VerticalAlignment="Top" Width="206" Height="34" Opacity="0.7" BorderThickness="0" FontSize="22" SelectionBrush="#FF0097E5"/>
+        <Image Source="images\iconMDP.png" HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="377,390,609,315"  />
+        <Label Content="Utilisateur" Foreground="#FF0097E5" HorizontalAlignment="Left" Margin="419,293,0,0" VerticalAlignment="Top" Height="33" Width="138" FontSize="14" FontFamily="Verdana"/>
+        <Label Content="Mot-de-passe" Foreground="#FF0097E5" HorizontalAlignment="Left" Margin="419,364,0,0" VerticalAlignment="Top" Height="33" Width="138" FontSize="14" FontFamily="Verdana"/>
+        <Button Name="BtnValiderConnection" Style="{StaticResource BtnStyleNoHover}" HorizontalAlignment="Center" Height="63" Margin="0,450,0,0" VerticalAlignment="Top" Width="63" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnValiderConnection_Click">
+            <Image Source="images\iconV.png"  HorizontalAlignment="Center" Height="53" Width="53" />
+        </Button>
+        <Image Source="images\logoAntal.png"  HorizontalAlignment="Center"  VerticalAlignment="Center" Height="181" Margin="0,522,0,0" Width="181" />
+    </Grid>
+</Window>

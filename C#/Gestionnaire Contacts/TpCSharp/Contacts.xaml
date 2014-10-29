@@ -1,0 +1,48 @@
+﻿<Window x:Class="TpCSharp.Contacts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Contacts" Height="616.25" Width="250" Loaded="Window_Loaded_1" 
+        ResizeMode="NoResize"
+        Icon="images\photoProfile.ico">
+    <Window.Background>
+        <ImageBrush ImageSource="images\bg.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Border  HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0,0,0,2">
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF07F7F" Offset="0"/>
+                    <GradientStop Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Grid HorizontalAlignment="Left" Height="123" VerticalAlignment="Top" Width="244" >
+                <Image Name="ImgUser" HorizontalAlignment="Left" Height="66" Margin="28,10,0,0" VerticalAlignment="Top" Width="66" Stretch="Fill" MouseDown="ImgUser_MouseDown"/>
+                <Label Name="NomUser" Content="" HorizontalAlignment="Center" Height="52" Margin="28,71,14,0" VerticalAlignment="Top" Width="202" HorizontalContentAlignment="Left" FontSize="22" FontWeight="Bold" />
+                <Image Name="addContact" HorizontalAlignment="Left" Height="43" Margin="114,23,0,0" VerticalAlignment="Top" Width="43" Source="images\addContact.png" MouseDown="addContact_MouseDown" />
+                <Image x:Name="refresh" HorizontalAlignment="Left" Height="20" Margin="211,10,0,0" VerticalAlignment="Top" Width="19" Source="images\refresh.png" RenderTransformOrigin="0,0.5" MouseDown="refresh_MouseDown" />
+            </Grid>
+        </Border>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Width="234" HorizontalAlignment="Left" Margin="0,137,0,55">
+            <StackPanel Name="ListeContactVue" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="224" Loaded="StackPanel_Loaded">
+
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <TextBox Name="SaisieRecherche" HorizontalAlignment="Left" Height="27" Margin="74,545,0,0" TextWrapping="Wrap" Text="Rechercher..." VerticalAlignment="Top" Width="129" GotFocus="SaisieRecherche_GotFocus" />
+        <ComboBox  Text="Nom" Name="ChoixRecherche" HorizontalAlignment="Left" Height="27" Margin="3,545,0,0" VerticalAlignment="Top" Width="66">
+            <ComboBoxItem Content="nom" Name="cbi1" IsSelected="True"></ComboBoxItem>
+            <ComboBoxItem Content="email" Name="cbi2"></ComboBoxItem>
+            <ComboBoxItem Content="ville" Name="cbi3"></ComboBoxItem>
+            <ComboBoxItem Content="pays" Name="cbi4"></ComboBoxItem>
+            <ComboBoxItem Content="province" Name="cbi5"></ComboBoxItem>
+        </ComboBox>
+        <Button HorizontalAlignment="Left" Height="27" Margin="207,545,0,0" VerticalAlignment="Top" Width="27" Click="Button_Click">
+            <Image Height="25" Width="23" Source="images\recherche.png" />
+
+        </Button>
+
+
+    </Grid>
+</Window>

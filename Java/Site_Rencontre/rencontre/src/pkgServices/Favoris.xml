@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.Favoris">
+	
+	<insert id="addFavoris" parameterType="hashmap">
+		insert into favoris (dateAjout, membreFavorisant, membreFavorise)
+			values (#{keyDateAjout}, #{keyMembreFavorisant}, #{keyMembreFavorise})
+	</insert>
+	
+	<delete id="deleteFavoris" parameterType="hashmap">
+		delete from favoris
+		where membreFavorisant= #{keyMembreFavorisant} and membreFavorise=#{keyMembreFavorise}
+	</delete>
+	
+	<select id="getFavorisByMembers" parameterType="hashmap" resultType="Integer">
+		select count(*) from favoris
+		where membreFavorisant=#{keyMembreFavorisant} and membreFavorise=#{keyMembreFavorise}
+	</select>
+	
+	<select id="getFavorisByMemberId" parameterType="Integer" resultType="Favoris">
+		select * 
+		from  favoris
+		where membreFavorisant = #{membreFavorisantId}
+	</select>
+	
+	<select id="getListeFavorisOnline" parameterType="Integer" resultType="Favoris">
+		select * 
+		from  favoris 
+		right join membre on (membreFavorisant = membreId)
+		where membreFavorisant = #{membreFavorisantId}
+		and membreFavorise IN (SELECT membreID FROM membre WHERE isonline IS TRUE)
+	</select>
+	
+</mapper>

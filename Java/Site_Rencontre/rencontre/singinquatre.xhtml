@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:icecore="http://www.icefaces.org/icefaces/core"
+        xmlns:ace="http://www.icefaces.org/icefaces/components"
+        xmlns:ice="http://www.icesoft.com/icefaces/component"
+    >
+    <h:head>
+        <meta charset="utf-8"/>
+    <title>Inscription(4)</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/> 
+    
+    <ice:outputStyle href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<ice:outputStyle href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+
+	<ice:outputStyle href="css/font-awesome.css" rel="stylesheet"/>
+    <ice:outputStyle href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet"/>
+    
+	<ice:outputStyle href="css/style.css" rel="stylesheet" type="text/css"/>
+	<ice:outputStyle href="css/pages/signin.css" rel="stylesheet" type="text/css"/>
+        
+    </h:head>
+    <h:body>
+                 	
+	<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			
+			<h:outputLink  class="brand" action="index">
+				ISI Love			
+			</h:outputLink>		
+			
+			<div class="nav-collapse">
+				<ul class="nav pull-right">
+					<li class="">						
+						<h:outputLink action="#{inscriptionBackingBean.login}" value="Vous avez déjà un compte? Connectez-vous maintenant">
+						</h:outputLink>
+						
+					</li>
+					
+				</ul>
+				
+			</div><!--/.nav-collapse -->	
+	
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+	
+</div> <!-- /navbar -->
+<div class="account-container register">
+	
+	<div class="content clearfix">
+		
+		<h:form>
+		
+			<h1>Inscription(4/4)</h1>			
+			
+			<div class="login-fields">
+				
+				<h5>Descrivez-vous:</h5>
+				<ice:outputLabel value="Descrivez-vous:"></ice:outputLabel>
+				
+<div class="form-group">
+
+<ice:inputTextarea cols="36" value="#{inscriptionBackingBean.description}" required="true" requiredMessage="Remplisez votre description svp!"></ice:inputTextarea>
+<!--     <h:selectManyCheckbox id="Musique" -->
+<!--                           value="#{inscriptionBackingBean.hobbies}" -->
+<!--                           layout="pageDirection" converter="javax.faces.Integer"> -->
+<!--         <f:selectItems value="#{inscriptionBackingBean.listeHobbiesAfficher}"  /> -->
+      
+<!--     </h:selectManyCheckbox> -->
+   
+	</div>
+			
+<!-- 			<div class="form-group"> -->
+
+<!--     <h:outputText value="Films"></h:outputText> -->
+<!--     <h:selectManyCheckbox id="Films" -->
+<!--                           value="#" -->
+<!--                           layout="pageDirection"> -->
+<!--         <f:selectItem  itemLabel="Musique" itemValue="1" /> -->
+      
+<!--     </h:selectManyCheckbox> -->
+   
+<!-- 	</div> -->
+<!-- 				<div class="form-group"> -->
+
+<!--     <h:outputText value="Théâtre"></h:outputText> -->
+<!--     <h:selectManyCheckbox id="Théâtre" -->
+<!--                           value="#" -->
+<!--                           layout="pageDirection"> -->
+<!--         <f:selectItem  itemLabel="Musique" itemValue="1" /> -->
+      
+<!--     </h:selectManyCheckbox> -->
+   
+<!-- 	</div> -->
+<!-- 						<div class="form-group"> -->
+
+<!--     <h:outputText value="Animaux"></h:outputText> -->
+<!--     <h:selectManyCheckbox id="Animaux" -->
+<!--                           value="#" -->
+<!--                           layout="pageDirection"> -->
+<!--         <f:selectItem  itemLabel="Musique" itemValue="1" /> -->
+      
+<!--     </h:selectManyCheckbox> -->
+   
+<!-- 	</div> -->
+<!-- 						<div class="form-group"> -->
+
+<!--     <h:outputText value="Art"></h:outputText> -->
+<!--     <h:selectManyCheckbox id="Art" -->
+<!--                           value="#" -->
+<!--                           layout="pageDirection"> -->
+<!--         <f:selectItem  itemLabel="Musique" itemValue="1" /> -->
+      
+<!--     </h:selectManyCheckbox> -->
+   
+<!-- 	</div> -->
+<!-- 						<div class="form-group"> -->
+
+<!--     <h:outputText value="Ordinateur"></h:outputText> -->
+<!--     <h:selectManyCheckbox id="Ordinateur" -->
+<!--                           value="#" -->
+<!--                           layout="pageDirection"> -->
+<!--         <f:selectItem  itemLabel="Musique" itemValue="1" /> -->
+      
+<!--     </h:selectManyCheckbox> -->
+   
+<!-- 	</div> -->
+<!-- 						<div class="form-group"> -->
+
+<!--     <h:outputText value="Sport"></h:outputText> -->
+<!--     <h:selectManyCheckbox id="Sport" -->
+<!--                           value="#" -->
+<!--                           layout="pageDirection"> -->
+<!--         <f:selectItem  itemLabel="Musique" itemValue="1" /> -->
+      
+<!--     </h:selectManyCheckbox> -->
+   
+<!-- 	</div> -->
+<!-- 						<div class="form-group"> -->
+
+<!--     <h:outputText value="Photographie"></h:outputText> -->
+<!--     <h:selectManyCheckbox id="Photographie" -->
+<!--                           value="#" -->
+<!--                           layout="pageDirection"> -->
+<!--         <f:selectItem  itemLabel="Musique" itemValue="1" /> -->
+      
+<!--     </h:selectManyCheckbox> -->
+   
+<!-- 	</div> -->
+<!-- 								<div class="form-group"> -->
+
+<!--     <h:outputText value="Danse"></h:outputText> -->
+<!--     <h:selectManyCheckbox id="Danse" -->
+<!--                           value="#" -->
+<!--                           layout="pageDirection"> -->
+<!--         <f:selectItem  itemLabel="Musique" itemValue="1" /> -->
+      
+<!--     </h:selectManyCheckbox> -->
+   
+<!-- 	</div> -->
+	
+<!-- 						<div class="form-group"> -->
+
+<!--     <h:outputText value="Livres"></h:outputText> -->
+<!--     <h:selectManyCheckbox id="Livres" -->
+<!--                           value="#" -->
+<!--                           layout="pageDirection"> -->
+<!--         <f:selectItem  itemLabel="Musique" itemValue="1" /> -->
+      
+<!--     </h:selectManyCheckbox> -->
+   
+<!-- 	</div> -->
+				
+			</div> <!-- /login-fields -->
+			
+			<div class="login-actions">
+				
+				
+									
+				<ice:commandLink value="Inscrire" styleClass="button btn btn-primary btn-large" action="#{inscriptionBackingBean.inscrire}"></ice:commandLink>
+				
+			</div> <!-- .actions -->
+			
+		</h:form>
+		
+	</div> <!-- /content -->
+	
+</div> <!-- /account-container -->
+
+
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="js/signin.js"></script>
+
+   
+    </h:body>
+</html>

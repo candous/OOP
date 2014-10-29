@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{526A7C9E-3367-49F9-9F64-EA130D676AD7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SpaceInvader</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Coord.h" />
+    <ClInclude Include="ExtraTerrestre.h" />
+    <ClInclude Include="GestionTouches.h" />
+    <ClInclude Include="Glutonien.h" />
+    <ClInclude Include="Highscores.h" />
+    <ClInclude Include="Jeu.h" />
+    <ClInclude Include="Laser.h" />
+    <ClInclude Include="Martien.h" />
+    <ClInclude Include="MesMartien.h" />
+    <ClInclude Include="MonMartien.h" />
+    <ClInclude Include="MonMartienLaser.h" />
+    <ClInclude Include="MonVaisseau.h" />
+    <ClInclude Include="MonVaisseauLaser.h" />
+    <ClInclude Include="Plutonien.h" />
+    <ClInclude Include="Son.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="UIKit.h" />
+    <ClInclude Include="Vaisseau.h" />
+    <ClInclude Include="Venusien.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Coord.cpp" />
+    <ClCompile Include="ExtraTerrestre.cpp" />
+    <ClCompile Include="GestionTouches.cpp" />
+    <ClCompile Include="Glutonien.cpp" />
+    <ClCompile Include="Highscores.cpp" />
+    <ClCompile Include="Jeu.cpp" />
+    <ClCompile Include="Laser.cpp" />
+    <ClCompile Include="Martien.cpp" />
+    <ClCompile Include="MesMartien.cpp" />
+    <ClCompile Include="MonMartien.cpp" />
+    <ClCompile Include="MonMartienLaser.cpp" />
+    <ClCompile Include="MonVaisseau.cpp" />
+    <ClCompile Include="MonVaisseauLaser.cpp" />
+    <ClCompile Include="Plutonien.cpp" />
+    <ClCompile Include="Son.cpp" />
+    <ClCompile Include="SpaceMain.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="UIKit.cpp" />
+    <ClCompile Include="Vaisseau.cpp" />
+    <ClCompile Include="Venusien.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="collision.wav" />
+    <Media Include="debut.wav" />
+    <Media Include="gameover.wav" />
+    <Media Include="laser2.wav" />
+    <Media Include="scores.wav" />
+    <Media Include="winner.wav" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

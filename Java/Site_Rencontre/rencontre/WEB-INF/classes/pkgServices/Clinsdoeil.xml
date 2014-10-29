@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.Clinsdoeil">
+
+	<insert id="addClindoeil" parameterType="Clinsdoeil" useGeneratedKeys="true" keyProperty="clindoeilId">
+		insert into clinsdoeil (fromId, toId, dateenvoi)
+			value(#{fromId}, #{toId}, #{dateEnvoi})
+	</insert>
+
+	<select id="getNombresClinsRecu" resultType="Integer" parameterType="Integer">
+		select count(*)
+		from clinsdoeil
+		where toId = #{toId}
+	</select>
+
+	<select id="getClinsdoeilRecus" resultType="Clinsdoeil" parameterType="Integer">
+		SELECT * FROM clinsdoeil
+		WHERE toId = #{toId}
+	</select>
+
+	<select id="getClinsdoeilById" resultType="Clinsdoeil" parameterType="Integer">
+		SELECT * FROM clinsdoeil
+		WHERE clindoeilid = #{clindoeilid}
+	</select>
+	
+	
+	<delete id="deleteClin" parameterType="Clinsdoeil">
+        delete
+        from clinsdoeil
+        where clindoeilid=#{clindoeilid}
+
+    </delete>
+
+</mapper>

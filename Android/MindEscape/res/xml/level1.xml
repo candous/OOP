@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Niveau>
+    <NombreRepereMax>4</NombreRepereMax>
+    <NombrePasMax>5</NombrePasMax>
+    <NombreClefNecessaire>1</NombreClefNecessaire>
+    <PositionDepart>12</PositionDepart>
+    <NombreAffichageCarte>5</NombreAffichageCarte>
+    <Cases>
+<!-- 
+		cf codeCaseImage.jpg
+        code pour les images des cases 
+		si 4 chemins 
+			=> code 4
+		si 3 chemins 
+			=> code 31
+			=> code 32
+			=> code 33
+			=> code 34
+		si 2 chemin coude
+			=> code 21
+			=> code 22
+			=> code 23
+			=> code 24
+		si 2 chemin droit
+			=> code 51
+			=> code 52
+			
+		si 1 chemin 
+			=> code 11
+			=> code 12
+			=> code 13
+			=> code 14
+		si pas de chemin () case vide
+			=> code 0		 
+
+-->
+		<!--  case 11  -->
+        <Case>
+            <Position>11</Position>            
+            <ImageCase>0</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>                
+            </CasesPossibles>            
+        </Case>
+        <!--  case 12  -->
+        <Case>
+            <Position>12</Position>            
+            <ImageCase>21</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+                <PositionPossible>13</PositionPossible>               
+            </CasesPossibles>            
+        </Case>
+        <!--  case 13  -->
+        <Case>
+            <Position>13</Position>            
+            <ImageCase>52</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+                <PositionPossible>12</PositionPossible> 
+                <PositionPossible>14</PositionPossible>                            
+            </CasesPossibles>            
+        </Case>
+        <!--  case 14  -->
+        <Case>
+            <Position>14</Position>            
+            <ImageCase>23</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+                <PositionPossible>13</PositionPossible> 
+                <PositionPossible>24</PositionPossible>                            
+            </CasesPossibles>            
+        </Case>
+         <!--  case 15  -->
+        <Case>
+            <Position>15</Position>            
+            <ImageCase>0</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>                                     
+            </CasesPossibles>            
+        </Case>
+         <!--  case 21  -->
+        <Case>
+            <Position>21</Position>            
+            <ImageCase>13</ImageCase>
+            <Clef>1</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+                <PositionPossible>31</PositionPossible>                                         
+            </CasesPossibles>            
+        </Case>
+         <!--  case 22  -->
+        <Case>
+            <Position>22</Position>            
+            <ImageCase>0</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>                                      
+            </CasesPossibles>            
+        </Case>
+         <!--  case 23  -->
+        <Case>
+            <Position>23</Position>            
+            <ImageCase>22</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+                <PositionPossible>24</PositionPossible> 
+                <PositionPossible>33</PositionPossible>                            
+            </CasesPossibles>            
+        </Case>
+         <!--  case 24  -->
+        <Case>
+            <Position>24</Position>            
+            <ImageCase>34</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+                <PositionPossible>14</PositionPossible> 
+                <PositionPossible>34</PositionPossible>
+                <PositionPossible>23</PositionPossible>                            
+            </CasesPossibles>            
+        </Case>
+         <!--  case 25  -->
+        <Case>
+            <Position>25</Position>            
+            <ImageCase>0</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>                                      
+            </CasesPossibles>          
+        </Case>
+           <!--  case 31  -->
+        <Case>
+            <Position>31</Position>            
+            <ImageCase>21</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+                <PositionPossible>21</PositionPossible> 
+                <PositionPossible>32</PositionPossible>                                           
+            </CasesPossibles>            
+        </Case>
+          <!--  case 32  -->
+        <Case>
+            <Position>32</Position>            
+            <ImageCase>52</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>        
+                <PositionPossible>31</PositionPossible> 
+                <PositionPossible>33</PositionPossible>                                 
+            </CasesPossibles>          
+        </Case>
+          <!--  case 33  -->
+        <Case>
+            <Position>33</Position>            
+            <ImageCase>4</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>        
+                <PositionPossible>32</PositionPossible> 
+                <PositionPossible>34</PositionPossible>  
+                <PositionPossible>23</PositionPossible> 
+                <PositionPossible>43</PositionPossible>                               
+            </CasesPossibles>          
+        </Case>
+           <!--  case 34  -->
+        <Case>
+            <Position>34</Position>            
+            <ImageCase>31</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>        
+                <PositionPossible>33</PositionPossible> 
+                <PositionPossible>35</PositionPossible>  
+                <PositionPossible>24</PositionPossible>        
+            </CasesPossibles>          
+        </Case>
+           <!--  case 35  -->
+        <Case>
+            <Position>35</Position>            
+            <ImageCase>14</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>        
+                <PositionPossible>34</PositionPossible>                   
+            </CasesPossibles>          
+        </Case>
+           <!--  case 41  -->
+        <Case>
+            <Position>41</Position>            
+            <ImageCase>0</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+            </CasesPossibles>          
+        </Case>
+           <!--  case 42  -->
+        <Case>
+            <Position>42</Position>            
+            <ImageCase>22</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>        
+                <PositionPossible>43</PositionPossible> 
+                <PositionPossible>52</PositionPossible>                   
+            </CasesPossibles>          
+        </Case>
+           <!--  case 43  -->
+        <Case>
+            <Position>43</Position>            
+            <ImageCase>34</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>        
+                <PositionPossible>33</PositionPossible> 
+                <PositionPossible>53</PositionPossible> 
+                <PositionPossible>42</PositionPossible>                   
+            </CasesPossibles>          
+        </Case>
+            <!--  case 44  -->
+        <Case>
+            <Position>44</Position>            
+            <ImageCase>0</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+            </CasesPossibles>          
+        </Case>
+            <!--  case 45  -->
+        <Case>
+            <Position>45</Position>            
+            <ImageCase>0</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+            </CasesPossibles>          
+        </Case>
+            <!--  case 51  -->
+        <Case>
+            <Position>51</Position>            
+            <ImageCase>0</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+            </CasesPossibles>          
+        </Case>
+            <!--  case 52  -->
+        <Case>
+            <Position>52</Position>            
+            <ImageCase>61</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>1</Sortie>
+            <CasesPossibles>
+                <PositionPossible>42</PositionPossible>
+            </CasesPossibles>          
+        </Case>
+            <!--  case 53  -->
+        <Case>
+            <Position>53</Position>            
+            <ImageCase>11</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+                <PositionPossible>43</PositionPossible>
+            </CasesPossibles>          
+        </Case>
+            <!--  case 54  -->
+        <Case>
+            <Position>54</Position>            
+            <ImageCase>0</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+            </CasesPossibles>          
+        </Case>
+            <!--  case 55  -->
+        <Case>
+            <Position>55</Position>            
+            <ImageCase>0</ImageCase>
+            <Clef>0</Clef>
+            <Sortie>0</Sortie>
+            <CasesPossibles>
+            </CasesPossibles>          
+        </Case>
+        
+        
+    </Cases>
+    
+</Niveau>

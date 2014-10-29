@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.Status">
+	
+	<select id="getListeStatus" resultType="Status">
+		select * from status
+	</select>
+	
+	<select id="getStatusById" parameterType="Integer" resultType="Status">
+		select * from status
+		where id = #{id}
+	</select>
+	
+	<select id="getStatusByMemberId" parameterType="Integer" resultType="Status">
+		SELECT h.id, h.description 
+		FROM membre m
+		LEFT JOIN status h ON (m.status_id = h.id)
+		WHERE membreid = #{id}
+	</select>
+
+</mapper>

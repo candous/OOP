@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{A3959D0F-4E42-4282-A8CF-8D30750130D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{2B029989-062F-4F20-AFC0-6C6CD09A88B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{AABDDA7B-FE01-43EE-9FEF-94FB2FBC1269}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{24C92C1B-233D-4E86-BFAD-6CE080645A7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PieControls", "PieControls\PieControls.csproj", "{CEC6E596-D667-4068-BF48-188825F52C82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationAntal", "ConfigurationAntal\ConfigurationAntal.csproj", "{9B409EE3-7068-49C9-92FE-687586975446}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_Antal.exe", "Setup_Antal.exe\Setup_Antal.exe.vdproj", "{FAC5D0B4-76B5-47B6-9FD4-100CC1C26988}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3959D0F-4E42-4282-A8CF-8D30750130D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3959D0F-4E42-4282-A8CF-8D30750130D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3959D0F-4E42-4282-A8CF-8D30750130D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3959D0F-4E42-4282-A8CF-8D30750130D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B029989-062F-4F20-AFC0-6C6CD09A88B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B029989-062F-4F20-AFC0-6C6CD09A88B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B029989-062F-4F20-AFC0-6C6CD09A88B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B029989-062F-4F20-AFC0-6C6CD09A88B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AABDDA7B-FE01-43EE-9FEF-94FB2FBC1269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AABDDA7B-FE01-43EE-9FEF-94FB2FBC1269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AABDDA7B-FE01-43EE-9FEF-94FB2FBC1269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AABDDA7B-FE01-43EE-9FEF-94FB2FBC1269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24C92C1B-233D-4E86-BFAD-6CE080645A7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24C92C1B-233D-4E86-BFAD-6CE080645A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24C92C1B-233D-4E86-BFAD-6CE080645A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24C92C1B-233D-4E86-BFAD-6CE080645A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEC6E596-D667-4068-BF48-188825F52C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC6E596-D667-4068-BF48-188825F52C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC6E596-D667-4068-BF48-188825F52C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC6E596-D667-4068-BF48-188825F52C82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B409EE3-7068-49C9-92FE-687586975446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B409EE3-7068-49C9-92FE-687586975446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B409EE3-7068-49C9-92FE-687586975446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B409EE3-7068-49C9-92FE-687586975446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC5D0B4-76B5-47B6-9FD4-100CC1C26988}.Debug|Any CPU.ActiveCfg = Debug
+		{FAC5D0B4-76B5-47B6-9FD4-100CC1C26988}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

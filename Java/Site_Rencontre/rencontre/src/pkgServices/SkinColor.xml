@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.SkinColor">
+	
+	<select id="getListeSkinColors" resultType="SkinColor">
+		select * from skin_color
+	</select>
+	
+	<select id="getSkinColorById" parameterType="Integer" resultType="SkinColor">
+		select * from skin_color
+		where id=#{id}
+	</select>
+	
+	<select id="getSkinColorByMemberId" parameterType="Integer" resultType="SkinColor">
+		SELECT h.id, h.description 
+		FROM membre m
+		LEFT JOIN skin_color h ON (m.skin_color_id = h.id)
+		where membreid = #{id}
+	</select>
+</mapper>

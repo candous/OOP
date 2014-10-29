@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:icecore="http://www.icefaces.org/icefaces/core"
+	xmlns:ace="http://www.icefaces.org/icefaces/components"
+	xmlns:ice="http://www.icesoft.com/icefaces/component"
+	>
+	
+<h:head>
+
+	<ice:outputStyle href="./xmlhttp/css/rime/rime.css" />
+	   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil</title>
+	<!-- BOOTSTRAP STYLES-->
+    <ice:outputStyle href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <ice:outputStyle href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- MORRIS CHART STYLES-->
+    <ice:outputStyle href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <ice:outputStyle href="assets/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <ice:outputStyle href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   
+   	<ice:outputStyle href="./xmlhttp/xcssss/rime/rime.css" />
+	<ice:outputStyle href="xcssss/bootstrap.min.css" rel="stylesheet" />
+	<ice:outputStyle href="xcssss/bootstrap-responsive.min.css" rel="stylesheet" />
+
+	<ice:outputStyle href="http://fonts.googleapis.com/xcssss?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+	<ice:outputStyle href="xcssss/font-awesome.css" rel="stylesheet" />
+	<ice:outputStyle href="xcssss/style.css" rel="stylesheet" />
+	
+	 <ice:outputStyle href="assets/css/bootstrap.css" rel="stylesheet" />
+	
+     <!-- FONTAWESOME STYLES-->
+    <ice:outputStyle href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- MORRIS CHART STYLES-->
+    <ice:outputStyle href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <ice:outputStyle href="assets/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <ice:outputStyle href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   
+   <ice:outputStyle rel="stylesheet" href="xcss/style.css"/>
+</h:head>
+<h:body>
+	<h:form id="iceForm">
+		 <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">ISI Love</a> 
+            </div>
+  <div style="color: white;
+padding: 15px 50px 5px 50px;
+float: right;
+font-size: 16px;"> <ice:commandLink  value="Déconnexion" action="#{membreBackingBean.logOut}" styleClass="btn btn-danger square-btn-adjust"></ice:commandLink> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+           
+                <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                 <ul class="nav" id="main-menu">
+				<li class="text-center">
+                    <h:graphicImage styleClass="user-image img-responsive" value="#{membreBackingBean.photoProfile}"/>
+					</li>
+				
+					
+                    <li>
+                      <ice:commandLink styleClass="active-menu" id="titre" value="tableau de bord" action="#{membreBackingBean.afficherTableau}"><div style="position:absolute;left:190px;top:-2px"> <i class="fa fa-dashboard fa-3x"></i></div></ice:commandLink>
+                    </li>
+                     <li>
+                       <ice:commandLink value="Messages" id="titreun"  action="#{membreBackingBean.afficherMessages}"><div style="position:absolute;left:200px;bottom:20px;"> <i class="icon-large icon-envelope" ></i></div> </ice:commandLink>
+                    </li>
+                    <li>
+                        <ice:commandLink  value="Favoris" id="titredeux"  action="#{membreBackingBean.afficherFavoris}"><div style="position:absolute;left:200px;bottom:20px;"> <i class="shortcut-icon icon-bookmark"></i> </div></ice:commandLink>
+                    </li>
+						   <li  >
+                        <ice:commandLink value="Recherche" id="titretrois"  action="#{membreBackingBean.afficherRecherche}"><div style="position:absolute;left:200px;bottom:20px;"> <i class="icon-large icon-search"></i></div></ice:commandLink>
+                    </li>	
+                    <li>
+                        <ice:commandLink  value="Mes photos" id="titrequatre"  action="#{membreBackingBean.afficherPhotos}"><div style="position:absolute;left:200px;bottom:20px;"> <i class="shortcut-icon icon-picture"></i></div></ice:commandLink>
+                    </li>	
+                      <li>
+                        <ice:commandLink  value="Configurations" id="titrecinque"  action="#{membreBackingBean.afficherConfigs}"> <i class="icon-large icon-cog" id="iconsix"></i></ice:commandLink>
+                        
+                    </li>
+					
+					
+					
+					
+                </ul>
+               
+            </div>
+            
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                     <h:outputText styleClass="h2" value="Bienvenue, #{membreBackingBean.membre.pseudo}. On aime vous voir de retour. "></h:outputText>   
+                     
+                    </div>
+                </div>              
+                 <!-- /. ROW  -->
+                  <hr />
+                <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6">           
+			<div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-red set-icon">
+                    <i class="fa fa-envelope-o" id="iii"></i>
+                </span>
+                <div class="text-box" >
+                   <ice:commandLink value="#{membreBackingBean.nbMsgPasLues} Nouveaux Messages" action="#{membreBackingBean.afficherMessages}"></ice:commandLink>
+                </div>
+             </div>
+		     </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">           
+			<div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-green set-icon">
+                    <i class="fa fa-bars" id="ii"></i>
+                </span>
+                <div class="text-box" >
+                <ice:commandLink value="#{membreBackingBean.nbFavorisOnline} amis en ligne" action="#{membreBackingBean.afficherAmisOnline}"></ice:commandLink>
+                </div>
+             </div>
+		     </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">           
+			<div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-blue set-icon">
+                    <i class="fa fa-bell-o" id="i"></i>
+                </span>
+                <div class="text-box" >
+                  <ice:commandLink value="#{membreBackingBean.nbClin} clins d'oeil" action="#{membreBackingBean.afficherClin}"></ice:commandLink>
+                </div>
+             </div>
+		     </div>
+			</div>
+                 <!-- /. ROW  -->
+                <hr/>                
+              
+ 
+ <div class="col-md-12 col-sm-12 col-xs-12">  
+ 
+  <ui:repeat var="membre" value="#{membreBackingBean.listeFavoris}">      			 
+	<ice:commandLink action="#{membreBackingBean.afficherMembre(membre)}">
+         <ice:graphicImage styleClass="col-md-3 col-sm-3 col-xs-3 thumbnail imageClip"  value="#{membre.profilImagePath}"></ice:graphicImage>
+	</ice:commandLink>
+</ui:repeat>
+
+ 	</div>
+    </div>
+    </div>  
+	</div>    
+
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+     <!-- MORRIS CHART SCRIPTS -->
+     <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+	</h:form>
+</h:body>
+</html>

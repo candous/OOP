@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pkgEntities.Hobby">
+	
+	<select id="getListeHobbies" resultType="Hobby">
+		select * from hobby
+	</select>
+	
+	<select id="getListeHobbiesByMembreId" parameterType="Integer" resultType="Hobby">
+		select h.id, h.description from membre m
+		left join user_hobby_link l on(l.user_id = m.membreId) 
+		left join hobby h on (l.hobby_id = h.id)
+		where user_id=#{id}
+	</select>
+	
+	<select id="getHobbyById" resultType="Hobby" parameterType="Integer">
+		select * from hobby
+		where id = #{id}
+		
+	</select>
+
+</mapper>

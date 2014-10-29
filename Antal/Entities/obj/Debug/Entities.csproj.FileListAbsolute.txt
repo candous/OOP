@@ -1,0 +1,5 @@
+C:\Users\rdeolive\Desktop\projet-final-isi\AntalFromStart\Antal\Entities\bin\Debug\Entities.dll
+C:\Users\rdeolive\Desktop\projet-final-isi\AntalFromStart\Antal\Entities\bin\Debug\Entities.pdb
+C:\Users\rdeolive\Desktop\projet-final-isi\AntalFromStart\Antal\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Users\rdeolive\Desktop\projet-final-isi\AntalFromStart\Antal\Entities\obj\Debug\Entities.dll
+C:\Users\rdeolive\Desktop\projet-final-isi\AntalFromStart\Antal\Entities\obj\Debug\Entities.pdb

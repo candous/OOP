@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+<properties resource="pkgServices/MyBatisConfig.properties"></properties>
+<!-- <typeAliases> -->
+<!-- 	<package name="pkgEntities"/> -->
+<!-- </typeAliases> -->
+
+<typeAliases>
+	<typeAlias type="pkgEntities.Clinsdoeil" alias="Clinsdoeil"/>
+	<typeAlias type="pkgEntities.Favoris" alias="Favoris"/>
+	<typeAlias type="pkgEntities.Membre" alias="Membre"/>
+	<typeAlias type="pkgEntities.Categorie" alias="Categorie"/>
+	<typeAlias type="pkgEntities.NiveauMembre" alias="NiveauMembre"/>
+	<typeAlias type="pkgEntities.HairColor" alias="HairColor"/>
+	<typeAlias type="pkgEntities.SkinColor" alias="SkinColor"/>
+	<typeAlias type="pkgEntities.EyeColor" alias="EyeColor"/>
+	<typeAlias type="pkgEntities.WeightRange" alias="WeightRange"/>
+	<typeAlias type="pkgEntities.HeightRange" alias="HeightRange"/>
+	<typeAlias type="pkgEntities.City" alias="City"/>
+	<typeAlias type="pkgEntities.Status" alias="Status"/>
+	<typeAlias type="pkgEntities.Hobby" alias="Hobby"/>
+	<typeAlias type="pkgEntities.Photo" alias="Photo"/>
+	<typeAlias type="pkgEntities.Message" alias="Message"/>
+	
+</typeAliases>
+<environments default="development">
+	<environment id="development">
+		<transactionManager type="JDBC"/>
+		<dataSource type="POOLED">
+			<property name="driver" value="${driver}"/>
+			<property name="url" value="${url}"/>
+			<property name="username" value="${username}" />
+			<property name="password" value="${password}" />
+		</dataSource>
+	</environment>
+</environments>
+
+<mappers>
+	<mapper resource="pkgServices/Clinsdoeil.xml"/>
+	<mapper resource="pkgServices/Favoris.xml"/>
+	<mapper resource="pkgServices/Membre.xml"/>
+	<mapper resource="pkgServices/Photo.xml"/>
+	<mapper resource="pkgServices/Message.xml"/>
+	<mapper resource="pkgServices/Categorie.xml"/>
+	<mapper resource="pkgServices/NiveauMembre.xml"/>
+	<mapper resource="pkgServices/HairColor.xml"/>
+	<mapper resource="pkgServices/SkinColor.xml"/>
+	<mapper resource="pkgServices/EyeColor.xml"/>
+	<mapper resource="pkgServices/HeightRange.xml"/>
+	<mapper resource="pkgServices/WeightRange.xml"/>
+	<mapper resource="pkgServices/City.xml"/>
+	<mapper resource="pkgServices/Hobby.xml"/>
+	<mapper resource="pkgServices/Status.xml"/>
+</mappers>
+
+
+</configuration>

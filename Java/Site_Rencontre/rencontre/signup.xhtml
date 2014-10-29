@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:icecore="http://www.icefaces.org/icefaces/core"
+        xmlns:ace="http://www.icefaces.org/icefaces/components"
+        xmlns:ice="http://www.icesoft.com/icefaces/component"
+    >
+    
+    <h:head>
+    <meta charset="utf-8"/>
+    <title>Inscription (1/4)</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/> 
+    
+    <ice:outputStyle href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<ice:outputStyle href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+
+	<ice:outputStyle href="css/font-awesome.css" rel="stylesheet"/>
+    <ice:outputStyle href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet"/>
+    
+	<ice:outputStyle href="css/style.css" rel="stylesheet" type="text/css"/>
+	<ice:outputStyle href="css/pages/signin.css" rel="stylesheet" type="text/css"/>
+        
+    </h:head>
+    <h:body>
+    <div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			
+			<h:outputLink class="brand" href="index.html">
+				ISI Love			
+			</h:outputLink>		
+			
+			<div class="nav-collapse">
+				<ul class="nav pull-right">
+					<li class="">						
+						 <h:outputLink action="#{inscriptionBackingBean.login}" value="Vous avez déjà un compte? Connectez-vous maintenant"> 
+						</h:outputLink>
+					</li>
+					
+				</ul>
+				
+			</div><!--/.nav-collapse -->	
+	
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+	
+</div> <!-- /navbar -->
+
+
+
+<div class="account-container register">
+	
+	<div class="content clearfix">
+		
+		<h:form action="#" method="post">
+		
+			<h1>Inscription</h1>			
+			
+			<div class="login-fields">
+				
+				<p>Créez un compte gratuit:</p>
+				
+				
+				
+				<div class="field">
+				<h:outputText value="Prenom"></h:outputText>
+				<h:inputText type="text" value="#{inscriptionBackingBean.prenom}" required="true" requiredMessage="Le prenom est requis pour votre inscription au site" styleClass="login" />
+				</div> <!-- /field -->
+				
+				<div class="field">
+				<h:outputText value="Nom"></h:outputText>
+						
+				<h:inputText type="text" value="#{inscriptionBackingBean.nom}" required="true" requiredMessage="Le nom est requis pour votre inscription au site" styleClass="login" />
+				</div> <!-- /field -->
+				
+				
+				<div class="field">
+				<h:outputText value="E-mail:"></h:outputText>
+				<h:inputText type="text" value="#{inscriptionBackingBean.email}" required="true" requiredMessage="Le Mail est requis pour votre inscription au site" styleClass="login"/>
+				</div> <!-- /field -->
+				
+				<div class="field">
+				<h:outputText value="Pseudo"></h:outputText>
+				<h:inputText type="text"  value="#{inscriptionBackingBean.pseudo}" required="true" requiredMessage="Le pseudo est requis pour votre inscription au site" styleClass="login"/>
+				</div> <!-- /field -->
+				
+				
+				<div class="field">
+				<h:outputText value="Mot de passe"></h:outputText>
+				<h:inputSecret type="password" value="#{inscriptionBackingBean.password}" required="true" requiredMessage="Le prenom est requis pour votre inscription au site" styleClass="login"/>
+				</div> <!-- /field -->
+				
+				
+				
+			</div> <!-- /login-fields -->
+			
+			<div class="login-actions">
+
+				<ice:commandLink id="id" value="Suivant" styleClass="button btn btn-primary btn-large" action="#{inscriptionBackingBean.testerUser}">
+				</ice:commandLink>
+				<ice:outputText rendered="#{inscriptionBackingBean.show}" value="#{inscriptionBackingBean.message}"></ice:outputText>
+				
+				
+			</div> <!-- .actions -->
+			
+		</h:form>
+		
+	</div> <!-- /content -->
+	
+</div> <!-- /account-container -->
+
+
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="js/signin.js"></script>
+    
+      
+    </h:body>
+</html>

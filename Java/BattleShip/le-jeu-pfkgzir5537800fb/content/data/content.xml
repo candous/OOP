@@ -1,0 +1,774 @@
+<zuiprezi>
+  <version>7</version>
+  <zui-table>
+    <settings>
+      
+      <autoplay>
+        
+        <delay>4000</delay>
+        
+      </autoplay>
+      
+      <bounds x="-311405.8098924177" y="-175863.99434098467" width="622811.6197848354" height="373591.1353137274"/>
+      <aspectratio>off</aspectratio>
+      <languages>
+        <language>fr</language>
+      </languages>
+      <mode type="normal"/>
+    </settings>
+    <object id="2" type="image" x="-39797.524838568395" y="6706.206876170094" r="0" s="148.79397002213102">
+      <source w="3628" h="2454">1804102900<url>1804102900.png</url></source>
+      <sourceUrl>MACDADDY_WORLD.png</sourceUrl>
+    <resource><id>1804102900</id><url>http://0103.static.prezi.com.s3.amazonaws.com/media/7/4/1/34d7a878003820d603336fd00856a430f7439.png</url></resource></object>
+    <object id="3" type="button" x="0" y="17271.892551432502" r="0" s="578.8212079784715" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>1077.0083102493074</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="5" type="button" x="-120812.28509565191" y="-77638.80816358364" r="0" s="0.5332381986545809" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="6" type="text" x="-120868.54999999999" y="-77675.3" r="0" s="1.001828228722892" class="body">
+      <height>27.59765625</height>
+      <width>212.1571202998518</width>
+      <p>
+        <text color="11793407"><![CDATA[Un tour par joueur]]></text>
+      </p>
+    </object>
+    <object id="8" type="text" x="-120801.416269545" y="-77742" r="0" s="1.537803820770553" class="head">
+      <height>27.59765625</height>
+      <width>237.01724912026387</width>
+      <p>
+        <text color="15724527"><![CDATA[Les Règles du Jeu]]></text>
+      </p>
+    </object>
+    <object id="10" type="text" x="-120793.01059755989" y="-77612.77477044363" r="0" s="1.001828228722892" class="body">
+      <height>55.1953125</height>
+      <width>364.6886334308615</width>
+      <p>
+        <text color="11793407"><![CDATA[Trouver les cases où se trouvent les navires de l'autre joueur]]></text>
+      </p>
+    </object>
+    <object id="11" type="text" x="-120799.15" y="-77548.42522955638" r="0" s="1.001828228722892" class="body">
+      <height>27.59765625</height>
+      <width>364.6886334308615</width>
+      <p>
+        <text color="11793407"><![CDATA[Qui trouve tous les navires gagne]]></text>
+      </p>
+    </object>
+    <object id="19" type="button" x="-39794.5" y="30534.3" r="0" s="287.588566287243" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="17" type="button" x="-149048.3622179526" y="32690.05126667431" r="0" s="0.24348523955761486" class="bracket">
+      <type>bracket</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="21" type="button" x="76443.21036437454" y="34746.44581372298" r="0" s="4.649537841954123" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="22" type="text" x="76516.10078655854" y="34460.99446513337" r="0" s="8.735379934028927" class="body">
+      <height>27.59765625</height>
+      <width>355.75834199440186</width>
+      <p>
+        <text color="11793407"><![CDATA[Une grille pour chaque joueur ]]></text>
+      </p>
+    </object>
+    <object id="23" type="text" x="76559.81896178644" y="33881.65789680275" r="0" s="13.408786310160751" class="head">
+      <height>27.59765625</height>
+      <width>237.01724912026387</width>
+      <p>
+        <text color="15724527"><![CDATA[Le Concept du Jeu]]></text>
+      </p>
+    </object>
+    <object id="24" type="text" x="76555.06170428028" y="35181.13113496396" r="0" s="8.735379934028927" class="body">
+      <height>27.59765625</height>
+      <width>364.6886334308615</width>
+      <p>
+        <text color="11793407"><![CDATA[4 navires par joueur]]></text>
+      </p>
+    </object>
+    <object id="25" type="text" x="76538.72956040104" y="35616.521261985676" r="0" s="8.735379934028927" class="body">
+      <height>27.59765625</height>
+      <width>364.6886334308615</width>
+      <p>
+        <text color="11793407"><![CDATA[Placement aléatoire des bateaux ]]></text>
+      </p>
+    </object>
+    <object id="26" type="text" x="76563.49999999999" y="34823.65" r="0" s="8.735379934028925" class="body">
+      <height>27.59765625</height>
+      <width>364.6886334308615</width>
+      <p>
+        <text color="11793407"><![CDATA[10 x 10 cases ]]></text>
+      </p>
+    </object>
+    <object id="27" type="button" x="-251234.87851660475" y="-96014.30303466391" r="0" s="0.7567266567167769" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="29" type="text" x="-251221.1911333043" y="-96045.41828584448" r="0" s="1.421710087609553" class="body">
+      <height>27.59765625</height>
+      <width>355.75834199440186</width>
+      <p>
+        <text color="11793407"><![CDATA[Joueur x Ordinateur ]]></text>
+      </p>
+    </object>
+    <object id="30" type="text" x="-251217.2258651416" y="-96138.80710322129" r="0" s="2.1823214220476386" class="head">
+      <height>27.59765625</height>
+      <width>237.01724912026387</width>
+      <p>
+        <text color="15724527"><![CDATA[Les Modes de Jeu]]></text>
+      </p>
+    </object>
+    <object id="31" type="text" x="-251214.80012350672" y="-95916.26381669857" r="0" s="1.421710087609553" class="body">
+      <height>27.59765625</height>
+      <width>364.6886334308615</width>
+      <p>
+        <text color="11793407"><![CDATA[Joueur x Joueur en Réseau]]></text>
+      </p>
+    </object>
+    <object id="33" type="text" x="-251214.8267647933" y="-95982.09497648173" r="0" s="1.4217100876095525" class="body">
+      <height>27.59765625</height>
+      <width>364.6886334308615</width>
+      <p>
+        <text color="11793407"><![CDATA[Ordinateur x Ordinateur  ]]></text>
+      </p>
+    </object>
+    <object id="34" type="button" x="40647.71567900343" y="-134004.2979388918" r="0" s="1.8918711617037571" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="35" type="text" x="40704.29999999998" y="-134221.2" r="0" s="3.554377649020123" class="body">
+      <height>27.59765625</height>
+      <width>405.7751067779678</width>
+      <p>
+        <text color="11793407"><![CDATA[Créer un jeu en interface graphique]]></text>
+      </p>
+    </object>
+    <object id="36" type="text" x="40690.50654063719" y="-134437.58127036135" r="0" s="5.455960784906663" class="head">
+      <height>27.59765625</height>
+      <width>197.37932285465453</width>
+      <p>
+        <text color="15724527"><![CDATA[Les défis  du TP]]></text>
+      </p>
+    </object>
+    <object id="37" type="text" x="40631.17166052198" y="-133893.83240503387" r="0" s="3.554377649020123" class="body">
+      <height>55.1953125</height>
+      <width>364.6886334308615</width>
+      <p>
+        <text color="11793407"><![CDATA[Respecter le modèle MVC]]></text>
+      </p>
+      <p>
+        <text color="11793407"><![CDATA[(modèle | vue | contrôleur)]]></text>
+      </p>
+    </object>
+    <object id="38" type="text" x="40682.58695878341" y="-133637.32457700832" r="0" s="3.554377649020123" class="body">
+      <height>55.1953125</height>
+      <width>393.57175909578706</width>
+      <p>
+        <text color="11793407"><![CDATA[Utiliser les bases de la programmation orientée objet]]></text>
+      </p>
+    </object>
+    <object id="39" type="text" x="40631.15" y="-134093.99999999997" r="0" s="3.554377649020122" class="body">
+      <height>27.59765625</height>
+      <width>364.6886334308615</width>
+      <p>
+        <text color="11793407"><![CDATA[Créer toutes les classes]]></text>
+      </p>
+    </object>
+    <object id="40" type="button" x="14479.037131112276" y="-129011.98543117863" r="0" s="0.8267074370016602" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="41" type="text" x="14481.6" y="-129059.65" r="0" s="1.553187392375683" class="body">
+      <height>27.59765625</height>
+      <width>355.75834199440186</width>
+      <p>
+        <text color="11793407"><![CDATA[L'interface graphique]]></text>
+      </p>
+    </object>
+    <object id="42" type="text" x="14436.503346912144" y="-129160.5" r="0" s="2.3841387554159663" class="head">
+      <height>55.1953125</height>
+      <width>166.59044608431503</width>
+      <p>
+        <text color="15724527"><![CDATA[Le Processus de codage]]></text>
+      </p>
+    </object>
+    <object id="46" type="text" x="14481.55" y="-129004.7" r="0" s="1.5531873923756827" class="body">
+      <height>27.59765625</height>
+      <width>355.75834199440186</width>
+      <p>
+        <text color="11793407"><![CDATA[Les  grands groupes de classes]]></text>
+      </p>
+    </object>
+    <object id="54" type="button" x="14479.050000000001" y="-128633.05" r="0" s="0.9093231776725482" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="49" type="button" x="14383.028593949628" y="-128812.2" r="0" s="0.39460033654472404" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>1122.9469661060339</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="50" type="image" x="14104.55" y="-128633" r="0" s="0.7264514268012031">
+      <source w="1904" h="707">1804185844<url>1804185844.png</url></source>
+      <sourceUrl>BattleShip.png</sourceUrl>
+    <resource><id>1804185844</id><url>http://0103.static.prezi.com.s3.amazonaws.com/media/e/5/9/7f8141ccea7bfe545b669510d3b0ff5d418a2.png</url></resource></object>
+    <object id="47" type="text" x="14477.753121100768" y="-128932.70527817267" r="0" s="1.2836259441121343" class="body">
+      <height>55.1953125</height>
+      <width>434.7638082191773</width>
+      <p>
+        <text color="3288169"><![CDATA[Vue | Controleur | Jeu | Joueur | Bateau]]></text>
+      </p>
+      <p>
+        <text color="11793407"><![CDATA[]]></text>
+      </p>
+    </object>
+    <object id="52" type="button" x="13671.85" y="-128706.45" r="0" s="0.7182309229864333" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="53" type="button" x="14051.25" y="-128729.15" r="0" s="0.6114466653635668" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="55" type="button" x="200573.55" y="82552.9" r="0" s="7.867681256828929" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="69" type="button" x="200573.25000000003" y="83685.55" r="0" s="6.55351696818509" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="56" type="text" x="200333.10768329943" y="82431.15498698964" r="0" s="16.16143702800382" class="body">
+      <height>27.59765625</height>
+      <width>62.698582833767055</width>
+      <p>
+        <text color="11793407"><![CDATA[Main]]></text>
+      </p>
+    </object>
+    <object id="57" type="text" x="200054.2" y="81295.25" r="0" s="20.43303475285823" class="head">
+      <height>82.79296875</height>
+      <width>222.56062839040104</width>
+      <p>
+        <text color="15724527"><![CDATA[L'ordre de initialisation des instances]]></text>
+      </p>
+    </object>
+    <object id="58" type="shape" x="200205.0283803785" y="82848.2460245313" r="-90.00000000000006" s="4" class="line1">
+      <geom type="arrow">
+        <sp>50.97614124735924 0</sp>
+        <ep>-50.97614124735924 0</ep>
+        <t>10</t>
+      </geom>
+    </object>
+    <object id="59" type="text" x="200333.3500000001" y="83254.65" r="0" s="16.16143702800382" class="body">
+      <height>27.59765625</height>
+      <width>62.698582833767055</width>
+      <p>
+        <text color="11793407"><![CDATA[Jeu]]></text>
+      </p>
+    </object>
+    <object id="60" type="shape" x="199226.46036704065" y="82984.33048462609" r="119.99999999999999" s="3.999999999999999" class="line1">
+      <geom type="arrow">
+        <sp>-177.2322107976963 -49.88028995047705</sp>
+        <ep>177.2322107976963 -49.88028995047705</ep>
+        <b>99.7605799009541</b>
+        <t>10</t>
+      </geom>
+    </object>
+    <object id="61" type="text" x="200557.28913207006" y="83851.2" r="0" s="16.16143702800382" class="body">
+      <height>27.59765625</height>
+      <width>178.3811233486264</width>
+      <p>
+        <text color="11793407"><![CDATA[Contrôleur(Jeu)]]></text>
+      </p>
+    </object>
+    <object id="62" type="shape" x="201271.0134827035" y="84820.84015561639" r="-90.00000000000006" s="4" class="line1">
+      <geom type="arrow">
+        <sp>56.41361297391116 0</sp>
+        <ep>-56.41361297391116 0</ep>
+        <t>10</t>
+      </geom>
+    </object>
+    <object id="64" type="text" x="201323.33769912287" y="84409.7" r="0" s="16.16143702800382" class="body">
+      <height>27.59765625</height>
+      <width>92.8633721115214</width>
+      <p>
+        <text color="11793407"><![CDATA[Joueurs]]></text>
+      </p>
+    </object>
+    <object id="65" type="shape" x="201406.8509943207" y="83467.00225169698" r="35.316675989900915" s="4.000000000000001" class="line1">
+      <geom type="arrow">
+        <sp>-213.03766223312098 82.6249238817146</sp>
+        <ep>213.037662233121 82.62492388171461</ep>
+        <b>-165.2498477634292</b>
+        <t>10</t>
+      </geom>
+    </object>
+    <object id="66" type="text" x="201323.4" y="85208.99999999999" r="0" s="16.16143702800382" class="body">
+      <height>27.59765625</height>
+      <width>92.8633721115214</width>
+      <p>
+        <text color="11793407"><![CDATA[Bateaux]]></text>
+      </p>
+    </object>
+    <object id="67" type="shape" x="199569.19999999998" y="84286.79999999999" r="-90.0000000000001" s="4" class="line1">
+      <geom type="arrow">
+        <sp>50.97614124735924 0</sp>
+        <ep>-50.97614124735924 0</ep>
+        <t>10</t>
+      </geom>
+    </object>
+    <object id="68" type="text" x="199635.59999999998" y="84722.9" r="0" s="16.16143702800382" class="body">
+      <height>27.59765625</height>
+      <width>44.8633721115214</width>
+      <p>
+        <text color="11793407"><![CDATA[Vue]]></text>
+      </p>
+    </object>
+    <object id="70" type="button" x="205735.56557346656" y="84228.43275853936" r="0" s="3.7854662169125164" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>799.219892735251</w>
+        <h>600</h>
+      </size>
+    </object>
+    <object id="71" type="text" x="205175.19714585977" y="83763.33275853937" r="0" s="7.775934470294686" class="body">
+      <height>27.59765625</height>
+      <width>179.15265693537756</width>
+      <p>
+        <text color="11793407"><![CDATA[Joueur x Ordi]]></text>
+      </p>
+    </object>
+    <object id="72" type="text" x="205706.1" y="83385.848141463" r="0" s="11.802603570181166" class="head">
+      <height>27.59765625</height>
+      <width>222.56062839040104</width>
+      <p>
+        <text color="15724527"><![CDATA[Fonctionnalités]]></text>
+      </p>
+    </object>
+    <object id="73" type="text" x="205175.25" y="84030.15000000001" r="0" s="7.775934470294686" class="body">
+      <height>27.59765625</height>
+      <width>179.15265693537756</width>
+      <p>
+        <text color="11793407"><![CDATA[Ordi x Ordi]]></text>
+      </p>
+    </object>
+    <object id="74" type="text" x="205181.9" y="84300.09999999999" r="0" s="7.775934470294685" class="body">
+      <height>27.59765625</height>
+      <width>179.15265693537756</width>
+      <p>
+        <text color="11793407"><![CDATA[Son]]></text>
+      </p>
+    </object>
+    <object id="75" type="text" x="205515.09879205207" y="84598.90000000002" r="0" s="7.775934470294685" class="body">
+      <height>27.59765625</height>
+      <width>264.83808044337195</width>
+      <p>
+        <text color="11793407"><![CDATA[Positionnement aléatoire]]></text>
+      </p>
+    </object>
+    <object id="76" type="text" x="205515.05" y="84882.75" r="0" s="7.775934470294685" class="body">
+      <height>27.59765625</height>
+      <width>264.83808044337195</width>
+      <p>
+        <text color="11793407"><![CDATA[Erreurs de saisie gérées]]></text>
+      </p>
+    </object>
+    <object id="77" type="text" x="206912.84011593703" y="83754.80920566081" r="0" s="7.775934470294686" class="body">
+      <height>27.59765625</height>
+      <width>81.33369097676119</width>
+      <p>
+        <text color="11793407"><![CDATA[Reset ]]></text>
+      </p>
+    </object>
+    <object id="78" type="text" x="206499.8744336222" y="84026.75000000001" r="0" s="7.775934470294686" class="body">
+      <height>27.59765625</height>
+      <width>153.92591049340314</width>
+      <p>
+        <text color="11793407"><![CDATA[1 tire par case]]></text>
+      </p>
+    </object>
+    <object id="79" type="text" x="206739.3" y="84276.3" r="0" s="7.775934470294685" class="body">
+      <height>27.59765625</height>
+      <width>264.83808044337195</width>
+      <p>
+        <text color="11793407"><![CDATA[Bateaux écoulés]]></text>
+      </p>
+    </object>
+    <object id="80" type="button" x="-33391.85" y="47672.85" r="0" s="501.01599657009257" class="invisible">
+      <type>invisible</type>
+      <size>
+        <w>1077.0083102493074</w>
+        <h>600</h>
+      </size>
+    </object>
+  </zui-table>
+  <path>
+    <s>
+      <eagle o="80"/>
+    </s>
+    <s>
+      <eagle o="5"/>
+    </s>
+    <s>
+      <eagle o="19"/>
+    </s>
+    <s>
+      <eagle o="21"/>
+    </s>
+    <s>
+      <eagle o="27"/>
+    </s>
+    <s>
+      <eagle o="34"/>
+    </s>
+    <s>
+      <eagle o="40"/>
+    </s>
+    <s>
+      <eagle o="50"/>
+    </s>
+    <s>
+      <eagle o="52"/>
+    </s>
+    <s>
+      <eagle o="53"/>
+    </s>
+    <s>
+      <eagle o="54"/>
+    </s>
+    <s>
+      <eagle o="55"/>
+    </s>
+    <s>
+      <eagle o="69"/>
+    </s>
+    <s>
+      <eagle o="70"/>
+    </s>
+    <s>
+      <eagle o="3"/>
+    </s>
+  </path>
+  <style type="text/css"><![CDATA[
+@font-face
+{
+	src: url('Arimo-Regular.keg');
+	fontFamily: body;
+	font-class: body;
+	font-style: normal;
+	font-weight: normal;
+	font-family: Arimo;
+}
+
+@font-face
+{
+	src: url('Arimo-Bold.keg');
+	fontFamily: head;
+	font-class: head;
+	font-style: normal;
+	font-weight: bold;
+	font-family: Arimo;
+}
+
+@font-face
+{
+	src: url('Arimo-BoldItalic.keg');
+	fontFamily: strong;
+	font-class: strong;
+	font-style: italic;
+	font-weight: bold;
+	font-family: Arimo;
+}
+
+@font-face
+{
+	src: url('Arimo-Italic.keg');
+	fontFamily: undefined;
+	font-class: undefined;
+	font-style: italic;
+	font-weight: normal;
+	font-family: Arimo;
+}
+
+.line1
+{
+	color: #c7c7c4;
+	gradEndColor: #c7c7c4;
+	gradStartColor: #c7c7c4;
+}
+
+.line2
+{
+	color: #555;
+	gradEndColor: #555;
+	gradStartColor: #888;
+}
+
+.line3
+{
+	color: #5374ec;
+	gradEndColor: #5374ec;
+	gradStartColor: #5374ec;
+}
+
+.line4
+{
+	color: #66e186;
+	gradEndColor: #66e186;
+	gradStartColor: #66e186;
+}
+
+.line5
+{
+	color: #fa5151;
+	gradEndColor: #fa5151;
+	gradStartColor: #fa5151;
+}
+
+.poly1
+{
+	color: #fff;
+	gradEndColor: #c7c7c4;
+	gradStartColor: #c7c7c4;
+}
+
+.poly2
+{
+	color: #fff;
+	gradEndColor: #000;
+	gradStartColor: #333;
+}
+
+.poly3
+{
+	color: #fff;
+	gradEndColor: #5374ec;
+	gradStartColor: #5374ec;
+}
+
+.poly4
+{
+	color: #fff;
+	gradEndColor: #66e186;
+	gradStartColor: #66e186;
+}
+
+.poly5
+{
+	color: #fff;
+	gradEndColor: #fa5151;
+	gradStartColor: #fa5151;
+}
+
+Background
+{
+	gradEnd: #fff;
+	gradStart: #fff;
+}
+
+Grid
+{
+	color: #b8b8b8;
+}
+
+ZArrow
+{
+	borderAlpha: 0;
+	borderThickness: 0;
+	gradEndAlpha: 1;
+	gradEndColor: #fff;
+	gradStartAlpha: 1;
+	gradStartColor: #fff;
+	thickness: 10;
+}
+
+ZCircle
+{
+	borderAlpha: 0;
+	gradEndAlpha: 1;
+	gradStartAlpha: .9;
+	lockTintAlpha: 0;
+	radius: 0;
+	thickness: 100;
+}
+
+ZCurveLine
+{
+	color: #fff;
+}
+
+ZFrame.bracket
+{
+	borderAlpha: 0;
+	borderColor: #318bff;
+	borderThickness: 0;
+	gradEndAlpha: 1;
+	gradEndColor: #318bff;
+	gradStartAlpha: 1;
+	gradStartColor: #318bff;
+	padding: 1.03;
+	thickness: 3;
+}
+
+ZFrame.circle
+{
+	borderAlpha: 0;
+	borderColor: #333;
+	borderThickness: 3;
+	gradEndAlpha: 1;
+	gradEndColor: #318bff;
+	gradStartAlpha: 1;
+	gradStartColor: #318bff;
+	padding: 1.03;
+	thickness: 3;
+}
+
+ZFrame.roundrect
+{
+	borderAlpha: 1;
+	borderColor: #318bff;
+	borderThickness: 10;
+	gradEndAlpha: 0.2;
+	gradEndColor: #318bff;
+	gradStartAlpha: 0;
+	gradStartColor: #318bff;
+	padding: 1.03;
+	radius: 1;
+	thickness: 3;
+}
+
+ZLabel
+{
+	lockTintAlpha: 0.15;
+	padding: 1.2;
+}
+
+ZLabel.body
+{
+	color: #333;
+	fontFamily: body;
+}
+
+ZLabel.body-background
+{
+	background-alpha: 0.9;
+	background-color: #e4e4dd;
+	background-padding: 10;
+}
+
+ZLabel.head
+{
+	color: #333;
+	fontFamily: head;
+}
+
+ZLabel.head-background
+{
+	background-alpha: 0.9;
+	background-color: #f6f1a6;
+	background-padding: 6;
+}
+
+ZLabel.strong
+{
+	color: #333;
+	fontFamily: strong;
+}
+
+ZLabel.strong-background
+{
+	background-alpha: 0.9;
+	background-color: #d3e2ee;
+	background-padding: 8;
+}
+
+ZLine
+{
+	color: #fff;
+}
+
+ZMarker
+{
+	alpha: .65;
+	color: #f0ea82;
+}
+
+ZPath
+{
+	alpha: 1;
+	color: #333;
+	textColor: #fff;
+	thickness: 3;
+}
+
+ZPath Ball.base
+{
+	alpha: 1;
+	fillColor: #333;
+	radius: 12;
+}
+
+ZPath Ball.mid
+{
+	alpha: .5;
+	fillColor: #333;
+	radius: 8;
+}
+
+ZPoly
+{
+	borderAlpha: 0;
+	gradEndAlpha: 1;
+	gradStartAlpha: .9;
+	lockTintAlpha: 0;
+	radius: 0;
+	thickness: 100;
+}
+
+]]></style>
+  <hash>-4d5b7960</hash>
+<sync><oid>pfkgzir5gscx</oid><title>le-jeu</title><hash>-4d5b7960</hash></sync><config>nJe1QzXFUrTsn1GtVG7ZgUAwVT77Mo23KiheKeaQlwX2wtBXMdODXQi7PY7XpCbP1D6qsEbhpGidBuSPeJtfTTgZKAXk1Phraiyo0Du6EfAIDVyAM4LtsaCJlPQMm0JWS93mUknHZH+DNd+zb17xAucb+lZYHrlgS1wk6VQQruALgTsa042mMUCxrNL75QanrOiv3b0ZJRZzq1F1tYIjs7X/+qDdI8riWuAzof8LDTxUM+46GVoe/0GDtuWu3ulVJ0s6cwroGHvTsWAohitPwYu5Z42LcQvogUc/eV5r/4DU6xQHIQrpUm4Ud66xjDJux+08dfrO7+7i1urYVe4awA==</config></zuiprezi>

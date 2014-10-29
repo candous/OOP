@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers sources\ET">
+      <UniqueIdentifier>{ce5e45c1-bbf0-4967-979e-7b11f77503a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Vaisseau">
+      <UniqueIdentifier>{52e7ff36-16cc-4e3d-89ae-196405d8035c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\ET">
+      <UniqueIdentifier>{781fa752-6854-4d3c-8c78-9a289d49a493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Vaisseau">
+      <UniqueIdentifier>{2bf10ef1-fa92-4027-8302-2b4cc9492d8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\ET\Type ET">
+      <UniqueIdentifier>{147e3aa5-230a-4c13-b116-3a3aae4f61cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\ET\Type ET">
+      <UniqueIdentifier>{e2697096-45c1-4985-881e-305bb8ff42c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Laser">
+      <UniqueIdentifier>{9f281768-eb99-4934-8958-ad197535e668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Laser">
+      <UniqueIdentifier>{2f79f43c-9e07-4b85-b8c5-30a62784773f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Coord.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionTouches.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Jeu.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="UIKit.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtraTerrestre.h">
+      <Filter>Fichiers d%27en-tête\ET</Filter>
+    </ClInclude>
+    <ClInclude Include="Martien.h">
+      <Filter>Fichiers d%27en-tête\ET</Filter>
+    </ClInclude>
+    <ClInclude Include="MonMartien.h">
+      <Filter>Fichiers d%27en-tête\ET</Filter>
+    </ClInclude>
+    <ClInclude Include="MonVaisseau.h">
+      <Filter>Fichiers d%27en-tête\Vaisseau</Filter>
+    </ClInclude>
+    <ClInclude Include="Vaisseau.h">
+      <Filter>Fichiers d%27en-tête\Vaisseau</Filter>
+    </ClInclude>
+    <ClInclude Include="Plutonien.h">
+      <Filter>Fichiers d%27en-tête\ET\Type ET</Filter>
+    </ClInclude>
+    <ClInclude Include="Glutonien.h">
+      <Filter>Fichiers d%27en-tête\ET\Type ET</Filter>
+    </ClInclude>
+    <ClInclude Include="Venusien.h">
+      <Filter>Fichiers d%27en-tête\ET\Type ET</Filter>
+    </ClInclude>
+    <ClInclude Include="MesMartien.h">
+      <Filter>Fichiers d%27en-tête\ET</Filter>
+    </ClInclude>
+    <ClInclude Include="Highscores.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="MonMartienLaser.h">
+      <Filter>Fichiers d%27en-tête\Laser</Filter>
+    </ClInclude>
+    <ClInclude Include="Laser.h">
+      <Filter>Fichiers d%27en-tête\Laser</Filter>
+    </ClInclude>
+    <ClInclude Include="MonVaisseauLaser.h">
+      <Filter>Fichiers d%27en-tête\Laser</Filter>
+    </ClInclude>
+    <ClInclude Include="Son.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Coord.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GestionTouches.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Jeu.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceMain.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="UIKit.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtraTerrestre.cpp">
+      <Filter>Fichiers sources\ET</Filter>
+    </ClCompile>
+    <ClCompile Include="Martien.cpp">
+      <Filter>Fichiers sources\ET</Filter>
+    </ClCompile>
+    <ClCompile Include="MonMartien.cpp">
+      <Filter>Fichiers sources\ET</Filter>
+    </ClCompile>
+    <ClCompile Include="MonVaisseau.cpp">
+      <Filter>Fichiers sources\Vaisseau</Filter>
+    </ClCompile>
+    <ClCompile Include="Vaisseau.cpp">
+      <Filter>Fichiers sources\Vaisseau</Filter>
+    </ClCompile>
+    <ClCompile Include="Venusien.cpp">
+      <Filter>Fichiers sources\ET\Type ET</Filter>
+    </ClCompile>
+    <ClCompile Include="Plutonien.cpp">
+      <Filter>Fichiers sources\ET\Type ET</Filter>
+    </ClCompile>
+    <ClCompile Include="Glutonien.cpp">
+      <Filter>Fichiers sources\ET\Type ET</Filter>
+    </ClCompile>
+    <ClCompile Include="MesMartien.cpp">
+      <Filter>Fichiers sources\ET</Filter>
+    </ClCompile>
+    <ClCompile Include="Highscores.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MonMartienLaser.cpp">
+      <Filter>Fichiers sources\Laser</Filter>
+    </ClCompile>
+    <ClCompile Include="Laser.cpp">
+      <Filter>Fichiers sources\Laser</Filter>
+    </ClCompile>
+    <ClCompile Include="MonVaisseauLaser.cpp">
+      <Filter>Fichiers sources\Laser</Filter>
+    </ClCompile>
+    <ClCompile Include="Son.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="collision.wav">
+      <Filter>Fichiers de ressources</Filter>
+    </Media>
+    <Media Include="debut.wav">
+      <Filter>Fichiers de ressources</Filter>
+    </Media>
+    <Media Include="gameover.wav">
+      <Filter>Fichiers de ressources</Filter>
+    </Media>
+    <Media Include="laser2.wav">
+      <Filter>Fichiers de ressources</Filter>
+    </Media>
+    <Media Include="winner.wav">
+      <Filter>Fichiers de ressources</Filter>
+    </Media>
+    <Media Include="scores.wav">
+      <Filter>Fichiers de ressources</Filter>
+    </Media>
+  </ItemGroup>
+</Project>
