@@ -1,0 +1,148 @@
+﻿@using TP_ASP.Models.EF
+@{
+    ViewBag.Title = "DetailProduit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Produit
+
+<h2>Produit</h2>
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm("DetailProduit", "Produit", FormMethod.Post, new { EncType = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m=>m.Id)
+    
+    @Html.LabelFor(m=>m.Nom) 
+    @Html.EditorFor(m=>m.Nom)<br>
+    @Html.ValidationMessageFor(m=>m.Nom)<br>
+    
+    @Html.LabelFor(m=>m.Description) 
+    @Html.TextAreaFor(m=>m.Description)<br>
+    @Html.ValidationMessageFor(m=>m.Description)<br>
+    
+    @Html.LabelFor(m=>m.PrixParJour) 
+    @Html.EditorFor(m=>m.PrixParJour)<br>
+    @Html.ValidationMessageFor(m=>m.PrixParJour)<br>
+   
+     
+    @Html.LabelFor(m=>m.CategorieProduitId)
+    @Html.DropDownListFor(m => m.CategorieProduitId, CategoriesProduit.GetSelectList(Model.CategorieProduitId), "Select")
+    @Html.ValidationMessageFor(m=>m.CategorieProduitId)<br/>
+    
+    @*
+    @Html.LabelFor(m=>m.DerniereDateLocation)
+    @Html.EditorFor(m=>m.DerniereDateLocation)<br>
+    @Html.ValidationMessageFor(m=>m.DerniereDateLocation)<br>*@
+    
+    @Html.LabelFor(m=>m.NbMaxPersonnes)
+    @Html.EditorFor(m=>m.NbMaxPersonnes)<br>
+    @Html.ValidationMessageFor(m=>m.NbMaxPersonnes)<br>
+    
+    @Html.LabelFor(m=>m.NbChambres)
+    @Html.EditorFor(m=>m.NbChambres)<br>
+    @Html.ValidationMessageFor(m=>m.NbChambres)<br>
+    
+    @Html.LabelFor(m=>m.SejourMinimum)
+    @Html.EditorFor(m=>m.SejourMinimum)<br>
+    @Html.ValidationMessageFor(m=>m.SejourMinimum)<br>
+
+    @Html.LabelFor(m=>m.Adresse)
+    @Html.EditorFor(m=>m.Adresse)<br>
+    
+    @Html.LabelFor(m=>m.Ville)
+    @Html.EditorFor(m=>m.Ville)<br>
+    
+    @Html.LabelFor(m=>m.Province)
+    @Html.EditorFor(m=>m.Province)<br>
+    
+    @Html.LabelFor(m=>m.Pays)
+    @Html.EditorFor(m=>m.Pays)<br>
+        
+    @Html.LabelFor(m=>m.CodePostal)
+    @Html.EditorFor(m=>m.CodePostal)<br>
+    @Html.ValidationMessageFor(m=>m.CodePostal)<br>
+    
+    @Html.Label("Choisissez une photo pour l'imeuble")
+    <input type="file" name="Fichier" id="file" accept=".jpg , .jpeg"/><br> 
+   
+    <img src="/Images/PhotosProduits/profileProduit.jpg" width="100" height="100"/>
+    
+    
+     @Html.Label("Fonctionnalites")
+
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.AirClimatise)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.AirClimatise)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.AirClimatise)<br>
+
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.AnimauxPermis)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.AnimauxPermis)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.AnimauxPermis)<br>
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.Baignoire)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.Baignoire)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.Baignoire)<br>     
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.Chauffage)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.Chauffage)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.Chauffage)<br>
+ 
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.DejeunerInclus)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.DejeunerInclus)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.DejeunerInclus)<br>
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.Frigo)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.Frigo)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.Frigo)<br>
+   
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.FumeurPermis)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.FumeurPermis)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.FumeurPermis)<br> 
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.Garage)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.Garage)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.Garage)<br>
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.Gym)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.Gym)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.Gym)<br>
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.Internet)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.Internet)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.Internet)<br>
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.MenageInclus)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.MenageInclus)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.MenageInclus)<br>
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.Piscine)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.Piscine)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.Piscine)<br>
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.Poele)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.Poele)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.Poele)<br>
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.Tv)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.Tv)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.Tv)<br>
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.TvCable)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.TvCable)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.TvCable)<br>
+    
+    @Html.LabelFor(m=>m.FonctionnalitesProduit.Wifi)
+    @Html.EditorFor(m=>m.FonctionnalitesProduit.Wifi)<br>
+    @Html.ValidationMessageFor(m=>m.FonctionnalitesProduit.Wifi)<br>
+    
+    
+    
+    
+    <button type="submit">Enregistrer</button>
+    @*
+    if(WebSecurity.CurrentUserId==Model.UtilisateurId || Roles.IsUserInRole("Admin")){
+    <a href="@Url.Action("DeleteProduit", "Produit",new{ pId=Model.Id})">Supprimer</a>
+    }*@
+
+}

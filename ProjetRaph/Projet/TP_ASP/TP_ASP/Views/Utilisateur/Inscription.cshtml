@@ -1,0 +1,73 @@
+﻿@using TP_ASP.Models.EF
+
+@{
+    ViewBag.Title = "Inscription";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Utilisateur
+
+<h2>Inscription</h2>
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm("Inscription", "Utilisateur", FormMethod.Post, new { EncType = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(m=>m.UserProfileId)
+    
+    @Html.LabelFor(m=>m.Nom) 
+    @Html.EditorFor(m=>m.Nom)<br>
+    @Html.ValidationMessageFor(m=>m.Nom)<br>
+    
+    @Html.LabelFor(m=>m.Courriel)
+    @Html.EditorFor(m=>m.Courriel)<br>
+    @Html.ValidationMessageFor(m=>m.Courriel)<br>
+    
+    @Html.LabelFor(m=>m.Courriel_Confirm)
+    @Html.EditorFor(m=>m.Courriel_Confirm)<br>
+    @Html.ValidationMessageFor(m=>m.Courriel_Confirm)<br>
+    
+    @Html.LabelFor(m=>m.MotDePasse)
+    @Html.EditorFor(m=>m.MotDePasse)<br>
+    @Html.ValidationMessageFor(m=>m.MotDePasse)<br>
+    
+    @Html.LabelFor(m=>m.MotDePasse_Confirm)
+    @Html.EditorFor(m=>m.MotDePasse_Confirm)<br>
+    @Html.ValidationMessageFor(m=>m.MotDePasse_Confirm)<br>
+    
+    @Html.LabelFor(m=>m.Telephone)
+    @Html.EditorFor(m=>m.Telephone)<br>
+    @Html.ValidationMessageFor(m=>m.Telephone)<br>
+
+    @Html.LabelFor(m=>m.Adresse)
+    @Html.EditorFor(m=>m.Adresse)<br>
+    
+    @Html.LabelFor(m=>m.Ville)
+    @Html.EditorFor(m=>m.Ville)<br>
+    
+    @Html.LabelFor(m=>m.Province)
+    @Html.EditorFor(m=>m.Province)<br>
+    
+    @Html.LabelFor(m=>m.Pays)
+    @Html.EditorFor(m=>m.Pays)<br>
+        
+    @Html.LabelFor(m=>m.CodePostal)
+    @Html.EditorFor(m=>m.CodePostal)<br>
+    @Html.ValidationMessageFor(m=>m.CodePostal)<br>
+    
+    @Html.Label("Choisissez votre photo de profil")
+    <input type="file" name="Fichier" id="file" accept=".jpg , .jpeg"/><br> 
+   
+    @Html.Label("Recevoir Courriel?")
+    @Html.CheckBoxFor(m=>m.RecevoirCourriel)<br>
+    
+    <img src="@Model.URLPhotoProfil" width="100" height="100"/>
+    @*<img src="/Images/PhotosProfiles/profile.jpg"/>*@
+    
+ 
+    <button type="submit">Enregistrer</button>
+    
+    @*<a href="@Url.Action("Delete", "Utilisateur",new{ pModel=Model.UserProfileId})">Supprimer</a>*@
+
+
+}

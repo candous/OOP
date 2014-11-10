@@ -1,0 +1,25 @@
+﻿@using TP_ASP.Models
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model LoginModel
+<h2>Login</h2>
+
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm("Login", "Utilisateur", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+   
+    @Html.Label("Courriel") 
+    @Html.EditorFor(m=>m.UserName)<br>
+    @Html.ValidationMessageFor(m=>m.UserName)<br>
+    
+    @Html.Label("Mot de passe") 
+    @Html.EditorFor(m=>m.Password)<br>
+    @Html.ValidationMessageFor(m=>m.Password)<br>
+    
+    <button type="submit">Login</button>
+}

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MontRealEstateModelStoreContainer" CdmEntityContainer="MontRealEstateEntities">
+    <EntitySetMapping Name="CategoriesProduits">
+      <EntityTypeMapping TypeName="MontRealEstateModel.CategoriesProduit">
+        <MappingFragment StoreEntitySet="CategoriesProduits">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="CreePar" ColumnName="CreePar" />
+          <ScalarProperty Name="DateModification" ColumnName="DateModification" />
+          <ScalarProperty Name="ModifiePar" ColumnName="ModifiePar" />
+          <ScalarProperty Name="EstSupprime" ColumnName="EstSupprime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentairesProduits">
+      <EntityTypeMapping TypeName="MontRealEstateModel.CommentairesProduit">
+        <MappingFragment StoreEntitySet="CommentairesProduits">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProduitId" ColumnName="ProduitId" />
+          <ScalarProperty Name="UtilisateurId" ColumnName="UtilisateurId" />
+          <ScalarProperty Name="Commentaires" ColumnName="Commentaires" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="DateModification" ColumnName="DateModification" />
+          <ScalarProperty Name="ModifiePar" ColumnName="ModifiePar" />
+          <ScalarProperty Name="EstSupprime" ColumnName="EstSupprime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FavorisUtilisateurs">
+      <EntityTypeMapping TypeName="MontRealEstateModel.FavorisUtilisateur">
+        <MappingFragment StoreEntitySet="FavorisUtilisateurs">
+          <ScalarProperty Name="ProduitId" ColumnName="ProduitId" />
+          <ScalarProperty Name="UtilisateurId" ColumnName="UtilisateurId" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="DateModification" ColumnName="DateModification" />
+          <ScalarProperty Name="ModifiePar" ColumnName="ModifiePar" />
+          <ScalarProperty Name="EstSupprime" ColumnName="EstSupprime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FonctionnalitesProduits">
+      <EntityTypeMapping TypeName="MontRealEstateModel.FonctionnalitesProduit">
+        <MappingFragment StoreEntitySet="FonctionnalitesProduits">
+          <ScalarProperty Name="ProduitId" ColumnName="ProduitId" />
+          <ScalarProperty Name="Frigo" ColumnName="Frigo" />
+          <ScalarProperty Name="Poele" ColumnName="Poele" />
+          <ScalarProperty Name="Piscine" ColumnName="Piscine" />
+          <ScalarProperty Name="Garage" ColumnName="Garage" />
+          <ScalarProperty Name="Tv" ColumnName="Tv" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Wifi" ColumnName="Wifi" />
+          <ScalarProperty Name="TvCable" ColumnName="TvCable" />
+          <ScalarProperty Name="Chauffage" ColumnName="Chauffage" />
+          <ScalarProperty Name="AirClimatise" ColumnName="AirClimatise" />
+          <ScalarProperty Name="Baignoire" ColumnName="Baignoire" />
+          <ScalarProperty Name="Gym" ColumnName="Gym" />
+          <ScalarProperty Name="DejeunerInclus" ColumnName="DejeunerInclus" />
+          <ScalarProperty Name="MenageInclus" ColumnName="MenageInclus" />
+          <ScalarProperty Name="FumeurPermis" ColumnName="FumeurPermis" />
+          <ScalarProperty Name="AnimauxPermis" ColumnName="AnimauxPermis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotesProduits">
+      <EntityTypeMapping TypeName="MontRealEstateModel.NotesProduit">
+        <MappingFragment StoreEntitySet="NotesProduits">
+          <ScalarProperty Name="ProduitId" ColumnName="ProduitId" />
+          <ScalarProperty Name="UtilisateurId" ColumnName="UtilisateurId" />
+          <ScalarProperty Name="Confort" ColumnName="Confort" />
+          <ScalarProperty Name="Proprete" ColumnName="Proprete" />
+          <ScalarProperty Name="Localisation" ColumnName="Localisation" />
+          <ScalarProperty Name="Valeur" ColumnName="Valeur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhotosProduits">
+      <EntityTypeMapping TypeName="MontRealEstateModel.PhotosProduit">
+        <MappingFragment StoreEntitySet="PhotosProduits">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProduitId" ColumnName="ProduitId" />
+          <ScalarProperty Name="URLPhoto" ColumnName="URLPhoto" />
+          <ScalarProperty Name="EstProfil" ColumnName="EstProfil" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="ModifiePar" ColumnName="ModifiePar" />
+          <ScalarProperty Name="EstSupprime" ColumnName="EstSupprime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produits">
+      <EntityTypeMapping TypeName="MontRealEstateModel.Produit">
+        <MappingFragment StoreEntitySet="Produits">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategorieProduitId" ColumnName="CategorieProduitId" />
+          <ScalarProperty Name="UtilisateurId" ColumnName="UtilisateurId" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PrixParJour" ColumnName="PrixParJour" />
+          <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+          <ScalarProperty Name="Ville" ColumnName="Ville" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Pays" ColumnName="Pays" />
+          <ScalarProperty Name="CodePostal" ColumnName="CodePostal" />
+          <ScalarProperty Name="Actif" ColumnName="Actif" />
+          <ScalarProperty Name="NbMaxPersonnes" ColumnName="NbMaxPersonnes" />
+          <ScalarProperty Name="NbChambres" ColumnName="NbChambres" />
+          <ScalarProperty Name="SejourMinimum" ColumnName="SejourMinimum" />
+          <ScalarProperty Name="NbPhotosMax" ColumnName="NbPhotosMax" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="CreePar" ColumnName="CreePar" />
+          <ScalarProperty Name="DateModification" ColumnName="DateModification" />
+          <ScalarProperty Name="ModifiePar" ColumnName="ModifiePar" />
+          <ScalarProperty Name="EstSupprime" ColumnName="EstSupprime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utilisateurs">
+      <EntityTypeMapping TypeName="MontRealEstateModel.Utilisateur">
+        <MappingFragment StoreEntitySet="Utilisateurs">
+          <ScalarProperty Name="UserProfileId" ColumnName="UserProfileId" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Courriel" ColumnName="Courriel" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+          <ScalarProperty Name="Ville" ColumnName="Ville" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Pays" ColumnName="Pays" />
+          <ScalarProperty Name="CodePostal" ColumnName="CodePostal" />
+          <ScalarProperty Name="URLPhotoProfil" ColumnName="URLPhotoProfil" />
+          <ScalarProperty Name="RecevoirCourriel" ColumnName="RecevoirCourriel" />
+          <ScalarProperty Name="DateCreation" ColumnName="DateCreation" />
+          <ScalarProperty Name="DateModification" ColumnName="DateModification" />
+          <ScalarProperty Name="ModifiePar" ColumnName="ModifiePar" />
+          <ScalarProperty Name="EstSupprime" ColumnName="EstSupprime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

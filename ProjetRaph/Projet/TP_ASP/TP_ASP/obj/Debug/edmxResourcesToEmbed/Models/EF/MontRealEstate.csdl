@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MontRealEstateModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MontRealEstateEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="CategoriesProduits" EntityType="MontRealEstateModel.CategoriesProduit" />
+    <EntitySet Name="CommentairesProduits" EntityType="MontRealEstateModel.CommentairesProduit" />
+    <EntitySet Name="FavorisUtilisateurs" EntityType="MontRealEstateModel.FavorisUtilisateur" />
+    <EntitySet Name="FonctionnalitesProduits" EntityType="MontRealEstateModel.FonctionnalitesProduit" />
+    <EntitySet Name="NotesProduits" EntityType="MontRealEstateModel.NotesProduit" />
+    <EntitySet Name="PhotosProduits" EntityType="MontRealEstateModel.PhotosProduit" />
+    <EntitySet Name="Produits" EntityType="MontRealEstateModel.Produit" />
+    <EntitySet Name="Utilisateurs" EntityType="MontRealEstateModel.Utilisateur" />
+    <AssociationSet Name="fk_CategoriesProduits_Produits" Association="MontRealEstateModel.fk_CategoriesProduits_Produits">
+      <End Role="CategoriesProduits" EntitySet="CategoriesProduits" />
+      <End Role="Produits" EntitySet="Produits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_CreePar_CategoriesProduits" Association="MontRealEstateModel.fk_CreePar_CategoriesProduits">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="CategoriesProduits" EntitySet="CategoriesProduits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ModifiePar_CategoriesProduits" Association="MontRealEstateModel.fk_ModifiePar_CategoriesProduits">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="CategoriesProduits" EntitySet="CategoriesProduits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ProduitId_CommentairesProduits" Association="MontRealEstateModel.fk_ProduitId_CommentairesProduits">
+      <End Role="Produits" EntitySet="Produits" />
+      <End Role="CommentairesProduits" EntitySet="CommentairesProduits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UtilisateurId_CommentairesProduits" Association="MontRealEstateModel.fk_UtilisateurId_CommentairesProduits">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="CommentairesProduits" EntitySet="CommentairesProduits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ModifiePar_FavorisUtilisateurs" Association="MontRealEstateModel.fk_ModifiePar_FavorisUtilisateurs">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="FavorisUtilisateurs" EntitySet="FavorisUtilisateurs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ProduitId_FavorisUtilisateurs" Association="MontRealEstateModel.fk_ProduitId_FavorisUtilisateurs">
+      <End Role="Produits" EntitySet="Produits" />
+      <End Role="FavorisUtilisateurs" EntitySet="FavorisUtilisateurs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ProduitId_FonctionnalitesProduits" Association="MontRealEstateModel.fk_ProduitId_FonctionnalitesProduits">
+      <End Role="Produits" EntitySet="Produits" />
+      <End Role="FonctionnalitesProduits" EntitySet="FonctionnalitesProduits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ProduitId_NotesProduits" Association="MontRealEstateModel.fk_ProduitId_NotesProduits">
+      <End Role="Produits" EntitySet="Produits" />
+      <End Role="NotesProduits" EntitySet="NotesProduits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UtilisateurId_NotesProduits" Association="MontRealEstateModel.fk_UtilisateurId_NotesProduits">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="NotesProduits" EntitySet="NotesProduits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ModifiePar_PhotosProduits" Association="MontRealEstateModel.fk_ModifiePar_PhotosProduits">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="PhotosProduits" EntitySet="PhotosProduits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ProduitId_PhotosProduits" Association="MontRealEstateModel.fk_ProduitId_PhotosProduits">
+      <End Role="Produits" EntitySet="Produits" />
+      <End Role="PhotosProduits" EntitySet="PhotosProduits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_CreePar_Produits" Association="MontRealEstateModel.fk_CreePar_Produits">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Produits" EntitySet="Produits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ModifiePar_Produits" Association="MontRealEstateModel.fk_ModifiePar_Produits">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Produits" EntitySet="Produits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UtilisateurId_Produits" Association="MontRealEstateModel.fk_UtilisateurId_Produits">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Produits" EntitySet="Produits" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ModifiePar_Utilisateurs" Association="MontRealEstateModel.fk_ModifiePar_Utilisateurs">
+      <End Role="Utilisateurs" EntitySet="Utilisateurs" />
+      <End Role="Utilisateurs1" EntitySet="Utilisateurs" />
+    </AssociationSet>
+    <FunctionImport Name="USP_Search" ReturnType="Collection(MontRealEstateModel.USP_Search_Result)">
+      <Parameter Name="pNom" Mode="In" Type="String" />
+      <Parameter Name="pPrice" Mode="In" Type="Decimal" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="CategoriesProduit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreePar" Type="Int32" Nullable="false" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiePar" Type="Int32" Nullable="false" />
+    <Property Name="EstSupprime" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Produits" Relationship="MontRealEstateModel.fk_CategoriesProduits_Produits" FromRole="CategoriesProduits" ToRole="Produits" />
+    <NavigationProperty Name="Utilisateur" Relationship="MontRealEstateModel.fk_CreePar_CategoriesProduits" FromRole="CategoriesProduits" ToRole="Utilisateurs" />
+    <NavigationProperty Name="Utilisateur1" Relationship="MontRealEstateModel.fk_ModifiePar_CategoriesProduits" FromRole="CategoriesProduits" ToRole="Utilisateurs" />
+  </EntityType>
+  <EntityType Name="CommentairesProduit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ProduitId" Type="Int32" Nullable="false" />
+    <Property Name="UtilisateurId" Type="Int32" Nullable="false" />
+    <Property Name="Commentaires" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiePar" Type="Int32" Nullable="false" />
+    <Property Name="EstSupprime" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Produit" Relationship="MontRealEstateModel.fk_ProduitId_CommentairesProduits" FromRole="CommentairesProduits" ToRole="Produits" />
+    <NavigationProperty Name="Utilisateur" Relationship="MontRealEstateModel.fk_UtilisateurId_CommentairesProduits" FromRole="CommentairesProduits" ToRole="Utilisateurs" />
+  </EntityType>
+  <EntityType Name="FavorisUtilisateur">
+    <Key>
+      <PropertyRef Name="ProduitId" />
+      <PropertyRef Name="UtilisateurId" />
+    </Key>
+    <Property Name="ProduitId" Type="Int32" Nullable="false" />
+    <Property Name="UtilisateurId" Type="Int32" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiePar" Type="Int32" Nullable="false" />
+    <Property Name="EstSupprime" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Utilisateur" Relationship="MontRealEstateModel.fk_ModifiePar_FavorisUtilisateurs" FromRole="FavorisUtilisateurs" ToRole="Utilisateurs" />
+    <NavigationProperty Name="Produit" Relationship="MontRealEstateModel.fk_ProduitId_FavorisUtilisateurs" FromRole="FavorisUtilisateurs" ToRole="Produits" />
+  </EntityType>
+  <EntityType Name="FonctionnalitesProduit">
+    <Key>
+      <PropertyRef Name="ProduitId" />
+    </Key>
+    <Property Name="ProduitId" Type="Int32" Nullable="false" />
+    <Property Name="Frigo" Type="Boolean" Nullable="false" />
+    <Property Name="Poele" Type="Boolean" Nullable="false" />
+    <Property Name="Piscine" Type="Boolean" Nullable="false" />
+    <Property Name="Garage" Type="Boolean" Nullable="false" />
+    <Property Name="Tv" Type="Boolean" Nullable="false" />
+    <Property Name="Internet" Type="Boolean" Nullable="false" />
+    <Property Name="Wifi" Type="Boolean" Nullable="false" />
+    <Property Name="TvCable" Type="Boolean" Nullable="false" />
+    <Property Name="Chauffage" Type="Boolean" Nullable="false" />
+    <Property Name="AirClimatise" Type="Boolean" Nullable="false" />
+    <Property Name="Baignoire" Type="Boolean" Nullable="false" />
+    <Property Name="Gym" Type="Boolean" Nullable="false" />
+    <Property Name="DejeunerInclus" Type="Boolean" Nullable="false" />
+    <Property Name="MenageInclus" Type="Boolean" Nullable="false" />
+    <Property Name="FumeurPermis" Type="Boolean" Nullable="false" />
+    <Property Name="AnimauxPermis" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Produit" Relationship="MontRealEstateModel.fk_ProduitId_FonctionnalitesProduits" FromRole="FonctionnalitesProduits" ToRole="Produits" />
+  </EntityType>
+  <EntityType Name="NotesProduit">
+    <Key>
+      <PropertyRef Name="ProduitId" />
+      <PropertyRef Name="UtilisateurId" />
+    </Key>
+    <Property Name="ProduitId" Type="Int32" Nullable="false" />
+    <Property Name="UtilisateurId" Type="Int32" Nullable="false" />
+    <Property Name="Confort" Type="Double" Nullable="false" />
+    <Property Name="Proprete" Type="Double" Nullable="false" />
+    <Property Name="Localisation" Type="Double" Nullable="false" />
+    <Property Name="Valeur" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Produit" Relationship="MontRealEstateModel.fk_ProduitId_NotesProduits" FromRole="NotesProduits" ToRole="Produits" />
+    <NavigationProperty Name="Utilisateur" Relationship="MontRealEstateModel.fk_UtilisateurId_NotesProduits" FromRole="NotesProduits" ToRole="Utilisateurs" />
+  </EntityType>
+  <EntityType Name="PhotosProduit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ProduitId" Type="Int32" Nullable="false" />
+    <Property Name="URLPhoto" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="EstProfil" Type="Boolean" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiePar" Type="Int32" Nullable="false" />
+    <Property Name="EstSupprime" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Utilisateur" Relationship="MontRealEstateModel.fk_ModifiePar_PhotosProduits" FromRole="PhotosProduits" ToRole="Utilisateurs" />
+    <NavigationProperty Name="Produit" Relationship="MontRealEstateModel.fk_ProduitId_PhotosProduits" FromRole="PhotosProduits" ToRole="Produits" />
+  </EntityType>
+  <EntityType Name="Produit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CategorieProduitId" Type="Int32" Nullable="false" />
+    <Property Name="UtilisateurId" Type="Int32" Nullable="false" />
+    <Property Name="Nom" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="PrixParJour" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Adresse" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Ville" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Province" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Pays" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="CodePostal" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Actif" Type="Boolean" Nullable="false" />
+    <Property Name="NbMaxPersonnes" Type="Int32" Nullable="false" />
+    <Property Name="NbChambres" Type="Int32" Nullable="false" />
+    <Property Name="SejourMinimum" Type="Int32" Nullable="false" />
+    <Property Name="NbPhotosMax" Type="Int32" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreePar" Type="Int32" Nullable="false" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiePar" Type="Int32" Nullable="false" />
+    <Property Name="EstSupprime" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CategoriesProduit" Relationship="MontRealEstateModel.fk_CategoriesProduits_Produits" FromRole="Produits" ToRole="CategoriesProduits" />
+    <NavigationProperty Name="CommentairesProduits" Relationship="MontRealEstateModel.fk_ProduitId_CommentairesProduits" FromRole="Produits" ToRole="CommentairesProduits" />
+    <NavigationProperty Name="FavorisUtilisateurs" Relationship="MontRealEstateModel.fk_ProduitId_FavorisUtilisateurs" FromRole="Produits" ToRole="FavorisUtilisateurs" />
+    <NavigationProperty Name="FonctionnalitesProduit" Relationship="MontRealEstateModel.fk_ProduitId_FonctionnalitesProduits" FromRole="Produits" ToRole="FonctionnalitesProduits" />
+    <NavigationProperty Name="NotesProduits" Relationship="MontRealEstateModel.fk_ProduitId_NotesProduits" FromRole="Produits" ToRole="NotesProduits" />
+    <NavigationProperty Name="PhotosProduits" Relationship="MontRealEstateModel.fk_ProduitId_PhotosProduits" FromRole="Produits" ToRole="PhotosProduits" />
+    <NavigationProperty Name="Utilisateur" Relationship="MontRealEstateModel.fk_CreePar_Produits" FromRole="Produits" ToRole="Utilisateurs" />
+    <NavigationProperty Name="Utilisateur1" Relationship="MontRealEstateModel.fk_ModifiePar_Produits" FromRole="Produits" ToRole="Utilisateurs" />
+    <NavigationProperty Name="Utilisateur2" Relationship="MontRealEstateModel.fk_UtilisateurId_Produits" FromRole="Produits" ToRole="Utilisateurs" />
+  </EntityType>
+  <EntityType Name="Utilisateur">
+    <Key>
+      <PropertyRef Name="UserProfileId" />
+    </Key>
+    <Property Name="UserProfileId" Type="Int32" Nullable="false" />
+    <Property Name="Nom" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Courriel" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Telephone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Adresse" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Ville" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Province" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Pays" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="CodePostal" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="URLPhotoProfil" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="RecevoirCourriel" Type="Boolean" Nullable="false" />
+    <Property Name="DateCreation" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateModification" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiePar" Type="Int32" Nullable="false" />
+    <Property Name="EstSupprime" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CategoriesProduits" Relationship="MontRealEstateModel.fk_CreePar_CategoriesProduits" FromRole="Utilisateurs" ToRole="CategoriesProduits" />
+    <NavigationProperty Name="CategoriesProduits1" Relationship="MontRealEstateModel.fk_ModifiePar_CategoriesProduits" FromRole="Utilisateurs" ToRole="CategoriesProduits" />
+    <NavigationProperty Name="CommentairesProduits" Relationship="MontRealEstateModel.fk_UtilisateurId_CommentairesProduits" FromRole="Utilisateurs" ToRole="CommentairesProduits" />
+    <NavigationProperty Name="FavorisUtilisateurs" Relationship="MontRealEstateModel.fk_ModifiePar_FavorisUtilisateurs" FromRole="Utilisateurs" ToRole="FavorisUtilisateurs" />
+    <NavigationProperty Name="NotesProduits" Relationship="MontRealEstateModel.fk_UtilisateurId_NotesProduits" FromRole="Utilisateurs" ToRole="NotesProduits" />
+    <NavigationProperty Name="PhotosProduits" Relationship="MontRealEstateModel.fk_ModifiePar_PhotosProduits" FromRole="Utilisateurs" ToRole="PhotosProduits" />
+    <NavigationProperty Name="Produits" Relationship="MontRealEstateModel.fk_CreePar_Produits" FromRole="Utilisateurs" ToRole="Produits" />
+    <NavigationProperty Name="Produits1" Relationship="MontRealEstateModel.fk_ModifiePar_Produits" FromRole="Utilisateurs" ToRole="Produits" />
+    <NavigationProperty Name="Produits2" Relationship="MontRealEstateModel.fk_UtilisateurId_Produits" FromRole="Utilisateurs" ToRole="Produits" />
+    <NavigationProperty Name="Utilisateurs1" Relationship="MontRealEstateModel.fk_ModifiePar_Utilisateurs" FromRole="Utilisateurs" ToRole="Utilisateurs1" />
+    <NavigationProperty Name="Utilisateur1" Relationship="MontRealEstateModel.fk_ModifiePar_Utilisateurs" FromRole="Utilisateurs1" ToRole="Utilisateurs" />
+  </EntityType>
+  <Association Name="fk_CategoriesProduits_Produits">
+    <End Role="CategoriesProduits" Type="MontRealEstateModel.CategoriesProduit" Multiplicity="1" />
+    <End Role="Produits" Type="MontRealEstateModel.Produit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriesProduits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Produits">
+        <PropertyRef Name="CategorieProduitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_CreePar_CategoriesProduits">
+    <End Role="Utilisateurs" Type="MontRealEstateModel.Utilisateur" Multiplicity="1" />
+    <End Role="CategoriesProduits" Type="MontRealEstateModel.CategoriesProduit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="UserProfileId" />
+      </Principal>
+      <Dependent Role="CategoriesProduits">
+        <PropertyRef Name="CreePar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ModifiePar_CategoriesProduits">
+    <End Role="Utilisateurs" Type="MontRealEstateModel.Utilisateur" Multiplicity="1" />
+    <End Role="CategoriesProduits" Type="MontRealEstateModel.CategoriesProduit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="UserProfileId" />
+      </Principal>
+      <Dependent Role="CategoriesProduits">
+        <PropertyRef Name="ModifiePar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ProduitId_CommentairesProduits">
+    <End Role="Produits" Type="MontRealEstateModel.Produit" Multiplicity="1" />
+    <End Role="CommentairesProduits" Type="MontRealEstateModel.CommentairesProduit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CommentairesProduits">
+        <PropertyRef Name="ProduitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UtilisateurId_CommentairesProduits">
+    <End Role="Utilisateurs" Type="MontRealEstateModel.Utilisateur" Multiplicity="1" />
+    <End Role="CommentairesProduits" Type="MontRealEstateModel.CommentairesProduit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="UserProfileId" />
+      </Principal>
+      <Dependent Role="CommentairesProduits">
+        <PropertyRef Name="UtilisateurId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ModifiePar_FavorisUtilisateurs">
+    <End Role="Utilisateurs" Type="MontRealEstateModel.Utilisateur" Multiplicity="1" />
+    <End Role="FavorisUtilisateurs" Type="MontRealEstateModel.FavorisUtilisateur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="UserProfileId" />
+      </Principal>
+      <Dependent Role="FavorisUtilisateurs">
+        <PropertyRef Name="ModifiePar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ProduitId_FavorisUtilisateurs">
+    <End Role="Produits" Type="MontRealEstateModel.Produit" Multiplicity="1" />
+    <End Role="FavorisUtilisateurs" Type="MontRealEstateModel.FavorisUtilisateur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FavorisUtilisateurs">
+        <PropertyRef Name="ProduitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ProduitId_FonctionnalitesProduits">
+    <End Role="Produits" Type="MontRealEstateModel.Produit" Multiplicity="1" />
+    <End Role="FonctionnalitesProduits" Type="MontRealEstateModel.FonctionnalitesProduit" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Produits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FonctionnalitesProduits">
+        <PropertyRef Name="ProduitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ProduitId_NotesProduits">
+    <End Role="Produits" Type="MontRealEstateModel.Produit" Multiplicity="1" />
+    <End Role="NotesProduits" Type="MontRealEstateModel.NotesProduit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NotesProduits">
+        <PropertyRef Name="ProduitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UtilisateurId_NotesProduits">
+    <End Role="Utilisateurs" Type="MontRealEstateModel.Utilisateur" Multiplicity="1" />
+    <End Role="NotesProduits" Type="MontRealEstateModel.NotesProduit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="UserProfileId" />
+      </Principal>
+      <Dependent Role="NotesProduits">
+        <PropertyRef Name="UtilisateurId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ModifiePar_PhotosProduits">
+    <End Role="Utilisateurs" Type="MontRealEstateModel.Utilisateur" Multiplicity="1" />
+    <End Role="PhotosProduits" Type="MontRealEstateModel.PhotosProduit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="UserProfileId" />
+      </Principal>
+      <Dependent Role="PhotosProduits">
+        <PropertyRef Name="ModifiePar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ProduitId_PhotosProduits">
+    <End Role="Produits" Type="MontRealEstateModel.Produit" Multiplicity="1" />
+    <End Role="PhotosProduits" Type="MontRealEstateModel.PhotosProduit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PhotosProduits">
+        <PropertyRef Name="ProduitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_CreePar_Produits">
+    <End Role="Utilisateurs" Type="MontRealEstateModel.Utilisateur" Multiplicity="1" />
+    <End Role="Produits" Type="MontRealEstateModel.Produit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="UserProfileId" />
+      </Principal>
+      <Dependent Role="Produits">
+        <PropertyRef Name="CreePar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ModifiePar_Produits">
+    <End Role="Utilisateurs" Type="MontRealEstateModel.Utilisateur" Multiplicity="1" />
+    <End Role="Produits" Type="MontRealEstateModel.Produit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="UserProfileId" />
+      </Principal>
+      <Dependent Role="Produits">
+        <PropertyRef Name="ModifiePar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UtilisateurId_Produits">
+    <End Role="Utilisateurs" Type="MontRealEstateModel.Utilisateur" Multiplicity="1" />
+    <End Role="Produits" Type="MontRealEstateModel.Produit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="UserProfileId" />
+      </Principal>
+      <Dependent Role="Produits">
+        <PropertyRef Name="UtilisateurId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ModifiePar_Utilisateurs">
+    <End Role="Utilisateurs" Type="MontRealEstateModel.Utilisateur" Multiplicity="1" />
+    <End Role="Utilisateurs1" Type="MontRealEstateModel.Utilisateur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilisateurs">
+        <PropertyRef Name="UserProfileId" />
+      </Principal>
+      <Dependent Role="Utilisateurs1">
+        <PropertyRef Name="ModifiePar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="USP_Search_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="CategorieProduitId" Nullable="false" />
+    <Property Type="Int32" Name="UtilisateurId" Nullable="false" />
+    <Property Type="String" Name="Nom" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Description" Nullable="false" />
+    <Property Type="Decimal" Name="PrixParJour" Nullable="false" Precision="19" />
+    <Property Type="String" Name="Adresse" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Ville" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Province" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="Pays" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="CodePostal" Nullable="true" MaxLength="20" />
+    <Property Type="Boolean" Name="Actif" Nullable="false" />
+    <Property Type="DateTime" Name="DerniereDateLocation" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="NbMaxPersonnes" Nullable="false" />
+    <Property Type="Int32" Name="NbChambres" Nullable="false" />
+    <Property Type="Int32" Name="SejourMinimum" Nullable="false" />
+    <Property Type="Int32" Name="NbPhotosMax" Nullable="false" />
+    <Property Type="DateTime" Name="DateCreation" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="CreePar" Nullable="false" />
+    <Property Type="DateTime" Name="DateModification" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="ModifiePar" Nullable="false" />
+    <Property Type="Boolean" Name="EstSupprime" Nullable="false" />
+  </ComplexType>
+</Schema>

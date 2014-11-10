@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9a111dd04b784a3b9624f3babead5bae" Name="Diagramme1" ZoomLevel="61">
+        <EntityTypeShape EntityType="MontRealEstateModel.CategoriesProduit" Width="1.5" PointX="10.125" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MontRealEstateModel.CommentairesProduit" Width="1.5" PointX="5.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MontRealEstateModel.FavorisUtilisateur" Width="1.5" PointX="3.625" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MontRealEstateModel.FonctionnalitesProduit" Width="1.5" PointX="10.25" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="MontRealEstateModel.NotesProduit" Width="1.5" PointX="4.375" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MontRealEstateModel.PhotosProduit" Width="1.5" PointX="10.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MontRealEstateModel.Produit" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MontRealEstateModel.Utilisateur" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="MontRealEstateModel.fk_CategoriesProduits_Produits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_CreePar_CategoriesProduits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_ModifiePar_CategoriesProduits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_ProduitId_CommentairesProduits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_UtilisateurId_CommentairesProduits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_ModifiePar_FavorisUtilisateurs" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_ProduitId_FavorisUtilisateurs" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_ProduitId_FonctionnalitesProduits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_ProduitId_NotesProduits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_UtilisateurId_NotesProduits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_ModifiePar_PhotosProduits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_ProduitId_PhotosProduits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_CreePar_Produits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_ModifiePar_Produits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_UtilisateurId_Produits" ManuallyRouted="false" />
+        <AssociationConnector Association="MontRealEstateModel.fk_ModifiePar_Utilisateurs" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
